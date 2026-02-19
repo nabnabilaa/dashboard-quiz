@@ -1,0 +1,256 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* ========================================
+   MAXY ACADEMY — Unified Design System
+   ======================================== */
+
+@theme {
+  --font-sans: var(--font-jakarta-sans);
+  --font-mono: var(--font-jetbrains-mono);
+
+  /* Brand Colors */
+  --color-maxy-primary: #F5A623;
+  --color-maxy-primary-hover: #E09000;
+  --color-maxy-primary-light: #FFF8EB;
+  --color-maxy-accent: #3B82F6;
+  --color-maxy-accent-light: #EFF6FF;
+
+  /* Semantic Colors */
+  --color-maxy-success: #10B981;
+  --color-maxy-success-light: #D1FAE5;
+  --color-maxy-warning: #F59E0B;
+  --color-maxy-danger: #EF4444;
+  --color-maxy-danger-light: #FEE2E2;
+
+  /* Surface Colors */
+  --color-maxy-bg: #F8FAFC;
+  --color-maxy-card: #FFFFFF;
+  --color-maxy-border: #E2E8F0;
+
+  /* Text Colors */
+  --color-maxy-text: #1E293B;
+  --color-maxy-text-light: #64748B;
+  --color-maxy-text-muted: #94A3B8;
+}
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #1E293B;
+  --radius: 12px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+}
+
+/* ========================
+   Base Styles
+   ======================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(245, 166, 35, 0.2);
+  color: #1E293B;
+}
+
+/* ========================
+   Custom Scrollbar
+   ======================== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #CBD5E1 #F1F5F9;
+}
+
+/* ========================
+   Shared Animations
+   ======================== */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(245, 166, 35, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0); }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.animate-shake { animation: shake 0.5s ease-in-out; }
+.animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
+.animate-slide-up { animation: slide-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-slide-down { animation: slide-down 0.3s ease-out; }
+.animate-pop { animation: pop-in 0.3s ease-out; }
+.animate-float { animation: float 3s ease-in-out infinite; }
+.pulse-glow { animation: pulse-glow 2s infinite; }
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #F5A623, #E09000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Typewriter cursor */
+.cursor::after {
+  content: '|';
+  animation: blink 1s step-start infinite;
+}
+
+/* ========================
+   Shared Component Styles
+   ======================== */
+
+/* Maxy Navigation Bar */
+.maxy-nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-maxy-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Maxy Card */
+.maxy-card {
+  background: var(--color-maxy-card);
+  border: 1px solid var(--color-maxy-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.maxy-card:hover {
+  box-shadow: var(--shadow);
+  border-color: #CBD5E1;
+}
+
+/* Maxy Button Primary */
+.maxy-btn-primary {
+  background: linear-gradient(135deg, #F5A623, #E09000);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.25);
+}
+
+.maxy-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(245, 166, 35, 0.35);
+}
+
+/* ========================
+   Focus States
+   ======================== */
+button:focus-visible,
+a:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #F5A623;
+  outline-offset: 2px;
+}
+
+/* ========================
+   Code Blocks
+   ======================== */
+pre, code {
+  font-family: var(--font-mono), 'Fira Code', 'Consolas', monospace;
+}
+
+/* ========================
+   Typography Utilities
+   ======================== */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ========================
+   Responsive Touch Targets
+   ======================== */
+@media (max-width: 640px) {
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+  }
+}
+
+/* ========================
+   Print Styles
+   ======================== */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

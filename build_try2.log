@@ -1,0 +1,37 @@
+
+> consolidated-platform@0.1.0 build C:\laragon\www\quiz-maxy
+> next build
+
+▲ Next.js 16.1.1 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 6.2s
+  Running TypeScript ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/13) ...
+  Generating static pages using 15 workers (3/13) 
+  Generating static pages using 15 workers (6/13) 
+  Generating static pages using 15 workers (9/13) 
+✓ Generating static pages using 15 workers (13/13) in 1029.2ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /backend-laravel
+├ ○ /backend-laravel/builder
+├ ○ /backend-laravel/demo
+├ ○ /backend-laravel/learn
+├ ƒ /backend-laravel/learn/[id]
+├ ○ /backend-laravel/quiz
+├ ○ /belajaruiux
+├ ○ /ethical-hacking
+├ ƒ /ethical-hacking/modules/[id]
+├ ○ /frontend
+├ ○ /git-master
+└ ○ /uml-mastery
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

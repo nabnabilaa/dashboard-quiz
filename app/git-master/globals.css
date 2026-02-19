@@ -1,0 +1,46 @@
+/* git-master module — inherits root globals.css */
+
+/* Flow Diagram Styles (module-specific) */
+.flow-node {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.4;
+    filter: grayscale(100%);
+    transform: scale(0.9);
+}
+
+.flow-node.active {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.flow-line {
+    transition: all 0.5s ease;
+    opacity: 0.2;
+    stroke-dasharray: 8;
+}
+
+.flow-line.active {
+    opacity: 1;
+    stroke: #F5A623;
+    stroke-width: 3;
+    animation: dash 1s linear infinite;
+}
+
+.flow-line.active.reverse {
+    animation: dash-reverse 1s linear infinite;
+    stroke: #3B82F6;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -16;
+    }
+}
+
+@keyframes dash-reverse {
+    to {
+        stroke-dashoffset: 16;
+    }
+}

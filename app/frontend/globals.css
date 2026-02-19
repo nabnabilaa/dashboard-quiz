@@ -1,0 +1,7 @@
+/* frontend module — inherits root globals.css */
+
+/* Bootstrap Scope Overrides */
+.bs-scope img {
+  max-width: 100%;
+  height: auto;
+}
