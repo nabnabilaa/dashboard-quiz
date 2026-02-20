@@ -156,7 +156,7 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                         {[1, 2, 3].map(s => (
                             <div
                                 key={s}
-                                className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-bold transition-all ${step === s ? 'bg-brand-600 text-white shadow' :
+                                className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-bold transition-all ${step === s ? 'bg-[#E09000] text-white shadow' :
                                     step > s ? 'bg-emerald-500 text-white' : 'text-slate-400'
                                     }`}
                             >
@@ -183,9 +183,9 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                 {/* Left: Form Area */}
                 {step < 3 && (
                     <div className="w-full md:w-1/3 md:min-w-[320px] h-1/2 md:h-full bg-white border-t md:border-t-0 md:border-r border-slate-200 p-6 overflow-y-auto order-2 md:order-1">
-                        <div className="bg-brand-50 border border-brand-200 rounded-lg p-3 mb-6 flex items-start gap-3">
-                            <div className="bg-brand-200 p-1 rounded text-brand-700 mt-0.5">💡</div>
-                            <p className="text-xs text-brand-800 leading-relaxed">
+                        <div className="bg-[#FFF8EB] border border-[#FFDF88] rounded-lg p-3 mb-6 flex items-start gap-3">
+                            <div className="bg-[#FFDF88] p-1 rounded text-[#B87200] mt-0.5">💡</div>
+                            <p className="text-xs text-[#945A00] leading-relaxed">
                                 {view === 'activity'
                                     ? 'Geser (drag) untuk mengatur urutan. Tambahkan Nodes sesuai kebutuhan alur.'
                                     : (step === 1 ? 'Tambahkan semua pihak yang terlibat dalam sistem ini.' : 'Tulis kegiatan, lalu KLIK nama aktor di bawahnya untuk menghubungkan.')
@@ -204,12 +204,12 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                                     onAddBranch={(nodeId) => updateNodes(prev => addBranch(prev, nodeId))}
                                     onUpdateBranch={(branchId, label) => updateNodes(prev => updateBranchLabel(prev, branchId, label))}
                                     onRemoveBranch={(branchId) => updateNodes(prev => removeBranch(prev, branchId))}
-                                    onAddNodeToBranch={(nodeId, branchIndex) => updateNodes(prev => addNodeToBranch(prev, nodeId, branchIndex, { id: `node-${Date.now()}`, type: 'action', label: 'New Action' }))}
+                                    onAddNodeToBranch={(nodeId, branchIndex) => updateNodes(prev => addNodeToBranch(prev, nodeId, branchIndex))}
                                     onReorderBranch={(nodeId, branchIndex, newNodes) => updateNodes(prev => reorderBranchNodes(prev, nodeId, branchIndex, newNodes))}
                                 />
 
                                 <div className="grid grid-cols-2 gap-2 mt-4 pt-4 border-t border-slate-100">
-                                    <button onClick={() => handleAddNode('action')} className="p-2 border border-slate-200 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 hover:border-brand-300 flex items-center justify-center gap-2">
+                                    <button onClick={() => handleAddNode('action')} className="p-2 border border-slate-200 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 hover:border-[#FFCF4A] flex items-center justify-center gap-2">
                                         <Plus size={14} /> Action
                                     </button>
                                     <button onClick={() => handleAddNode('decision')} className="p-2 border border-orange-200 bg-orange-50 rounded-lg text-xs font-bold text-orange-700 hover:bg-orange-100 flex items-center justify-center gap-2">
@@ -230,11 +230,11 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                                     <div className="space-y-3">
                                         {actors.map((actor, idx) => (
                                             <div key={idx} className="flex gap-2 items-center bg-slate-50 p-2 rounded border border-slate-200">
-                                                <span className="font-bold text-brand-500 w-6">{idx + 1}</span>
+                                                <span className="font-bold text-[#F5A623] w-6">{idx + 1}</span>
                                                 <input
                                                     value={actor}
                                                     onChange={(e) => handleUpdateItem('actors', idx, e.target.value)}
-                                                    className="flex-1 bg-white border border-slate-300 rounded px-2 py-1 text-sm focus:outline-none focus:border-brand-500"
+                                                    className="flex-1 bg-white border border-slate-300 rounded px-2 py-1 text-sm focus:outline-none focus:border-[#F5A623]"
                                                     placeholder="Nama Aktor"
                                                 />
                                                 <button onClick={() => handleRemoveItem('actors', idx)} className="text-red-400 hover:text-red-600">
@@ -242,7 +242,7 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                                                 </button>
                                             </div>
                                         ))}
-                                        <button onClick={() => handleAddItem('actors')} className="w-full py-2 border-2 border-dashed border-brand-200 text-brand-600 font-bold rounded-lg hover:bg-brand-50 transition-colors flex justify-center items-center gap-2 text-sm mt-2">
+                                        <button onClick={() => handleAddItem('actors')} className="w-full py-2 border-2 border-dashed border-[#FFDF88] text-[#E09000] font-bold rounded-lg hover:bg-[#FFF8EB] transition-colors flex justify-center items-center gap-2 text-sm mt-2">
                                             <Plus size={16} /> Tambah Aktor
                                         </button>
                                     </div>
@@ -254,11 +254,11 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                                             {usecases.map((uc, uIdx) => (
                                                 <div key={uIdx} className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
                                                     <div className="flex gap-2 items-center mb-3">
-                                                        <span className="font-bold text-brand-500 w-6">{uIdx + 1}</span>
+                                                        <span className="font-bold text-[#F5A623] w-6">{uIdx + 1}</span>
                                                         <input
                                                             value={uc}
                                                             onChange={(e) => handleUpdateItem('usecases', uIdx, e.target.value)}
-                                                            className="flex-1 bg-slate-50 border border-slate-300 rounded px-2 py-1 text-sm font-semibold focus:outline-none focus:border-brand-500"
+                                                            className="flex-1 bg-slate-50 border border-slate-300 rounded px-2 py-1 text-sm font-semibold focus:outline-none focus:border-[#F5A623]"
                                                             placeholder="Nama Use Case"
                                                         />
                                                         <button onClick={() => handleRemoveItem('usecases', uIdx)} className="text-red-400 hover:text-red-600">
@@ -274,7 +274,7 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                                                                 <button
                                                                     key={aIdx}
                                                                     onClick={() => toggleMapping(aIdx, uIdx)}
-                                                                    className={`text-xs px-2 py-1 rounded-full border transition-all ${isActive ? 'bg-brand-600 text-white border-brand-600' : 'bg-white text-slate-500 border-slate-200 hover:border-brand-300'}`}
+                                                                    className={`text-xs px-2 py-1 rounded-full border transition-all ${isActive ? 'bg-[#E09000] text-white border-[#E09000]' : 'bg-white text-slate-500 border-slate-200 hover:border-[#FFCF4A]'}`}
                                                                 >
                                                                     {isActive ? '✓' : '+'} {actor}
                                                                 </button>
@@ -301,7 +301,7 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                                                         {usecases.map((u, i) => <option key={i} value={i}>{u}</option>)}
                                                     </select>
                                                     <select
-                                                        className="w-20 bg-white border border-slate-200 rounded p-1 font-mono text-brand-600"
+                                                        className="w-20 bg-white border border-slate-200 rounded p-1 font-mono text-[#E09000]"
                                                         value={rel.type}
                                                         onChange={(e) => updateRelation(rIdx, 'type', e.target.value)}
                                                     >
@@ -320,7 +320,7 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                                                     </button>
                                                 </div>
                                             ))}
-                                            <button onClick={addRelation} className="text-xs text-brand-600 font-bold hover:underline">+ Tambah Relasi</button>
+                                            <button onClick={addRelation} className="text-xs text-[#E09000] font-bold hover:underline">+ Tambah Relasi</button>
                                         </div>
                                     </div>
                                 )}
@@ -372,7 +372,7 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                             </button>
                             <button
                                 onClick={onBack}
-                                className="px-6 py-2 bg-brand-600 text-white rounded-lg font-bold hover:bg-brand-700 flex items-center gap-2"
+                                className="px-6 py-2 bg-[#E09000] text-white rounded-lg font-bold hover:bg-[#B87200] flex items-center gap-2"
                             >
                                 Selesai <Check size={18} />
                             </button>
@@ -380,7 +380,7 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                     ) : (
                         <button
                             onClick={() => setStep(step + 1)}
-                            className="px-8 py-2 bg-brand-600 text-white rounded-lg font-bold hover:bg-brand-700 flex items-center gap-2 shadow-lg hover:shadow-brand-200"
+                            className="px-8 py-2 bg-[#E09000] text-white rounded-lg font-bold hover:bg-[#B87200] flex items-center gap-2 shadow-lg hover:shadow-[#FFDF88]"
                         >
                             Lanjut <ArrowRight size={18} />
                         </button>
@@ -530,7 +530,7 @@ const ActivityNodeList = ({
                     <div className={`p-3 rounded-xl border shadow-sm transition-all relative group ${node.type === 'start' || node.type === 'end' ? 'bg-slate-50 border-slate-200' :
                         node.type === 'decision' ? 'bg-orange-50 border-orange-200 shadow-orange-100' :
                             node.type === 'fork' || node.type === 'join' ? 'bg-slate-800 border-slate-900 text-white shadow-slate-300' :
-                                'bg-white border-slate-200 hover:border-brand-300 hover:shadow-md'
+                                'bg-white border-slate-200 hover:border-[#FFCF4A] hover:shadow-md'
                         }`}>
                         <div className="flex items-center gap-3">
                             {/* Drag Handle */}
@@ -548,7 +548,7 @@ const ActivityNodeList = ({
                                     onChange={(e) => onUpdate(node.id, e.target.value)}
                                     className={`w-full bg-transparent text-sm font-semibold focus:outline-none placeholder:font-normal ${node.type === 'fork' || node.type === 'join'
                                         ? 'text-white placeholder:text-slate-500 selection:bg-slate-600'
-                                        : 'text-slate-800 placeholder:text-slate-400 selection:bg-brand-100'
+                                        : 'text-slate-800 placeholder:text-slate-400 selection:bg-[#FFEFC6]'
                                         }`}
                                     placeholder={node.type === 'decision' ? 'Apa kondisinya?' : 'Nama Aktivitas'}
                                 />
@@ -577,7 +577,7 @@ const ActivityNodeList = ({
                                             <input
                                                 value={branch.label}
                                                 onChange={(e) => onUpdateBranch(branch.id, e.target.value)}
-                                                className="text-xs font-bold text-slate-500 bg-transparent focus:text-brand-600 focus:outline-none border-b border-transparent focus:border-brand-300 transition-colors w-24"
+                                                className="text-xs font-bold text-slate-500 bg-transparent focus:text-[#E09000] focus:outline-none border-b border-transparent focus:border-[#FFCF4A] transition-colors w-24"
                                                 placeholder="Label"
                                             />
                                             {/* Delete Branch Button */}
@@ -607,7 +607,7 @@ const ActivityNodeList = ({
                                             {/* Add Action to Branch Button */}
                                             <button
                                                 onClick={() => onAddNodeToBranch(node.id, bIdx)}
-                                                className="mt-2 text-[10px] font-bold text-slate-400 hover:text-brand-600 hover:bg-brand-50 px-2 py-1.5 rounded-lg border border-dashed border-slate-300 hover:border-brand-200 flex items-center gap-1 transition-all w-full justify-center"
+                                                className="mt-2 text-[10px] font-bold text-slate-400 hover:text-[#E09000] hover:bg-[#FFF8EB] px-2 py-1.5 rounded-lg border border-dashed border-slate-300 hover:border-[#FFDF88] flex items-center gap-1 transition-all w-full justify-center"
                                             >
                                                 <Plus size={10} /> Tambah Aksi
                                             </button>

@@ -23,7 +23,7 @@ export default function VisualMenuScreen({ onStartBuilder, onBack }: VisualMenuS
             title: 'ATM System',
             desc: 'Simulasi alur transaksi mesin ATM termasuk tarik tunai & cek saldo.',
             icon: <CreditCard size={32} className="text-white" />,
-            color: 'from-orange-500 to-brand-600',
+            color: 'from-orange-500 to-[#E09000]',
             btnColor: 'bg-blue-600 hover:bg-blue-700'
         }
     ];
@@ -103,13 +103,13 @@ export default function VisualMenuScreen({ onStartBuilder, onBack }: VisualMenuS
                         <div className="grid grid-cols-1 gap-4">
                             <button
                                 onClick={() => handleTypeSelect('usecase')}
-                                className="flex items-center gap-4 p-4 rounded-xl border-2 border-slate-200 hover:border-brand-500 hover:bg-brand-50 transition-all group text-left"
+                                className="flex items-center gap-4 p-4 rounded-xl border-2 border-slate-200 hover:border-[#F5A623] hover:bg-[#FFF8EB] transition-all group text-left"
                             >
-                                <div className="w-12 h-12 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <div className="w-12 h-12 rounded-lg bg-[#FFEFC6] text-[#E09000] flex items-center justify-center group-hover:scale-110 transition-transform">
                                     <User size={24} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-slate-800 group-hover:text-brand-700">Use Case Diagram</h4>
+                                    <h4 className="font-bold text-slate-800 group-hover:text-[#B87200]">Use Case Diagram</h4>
                                     <p className="text-sm text-slate-500">Fokus pada aktor dan fungsionalitas sistem.</p>
                                 </div>
                             </button>
@@ -135,7 +135,7 @@ export default function VisualMenuScreen({ onStartBuilder, onBack }: VisualMenuS
             <div className="text-center">
                 <button
                     onClick={onBack}
-                    className="inline-flex items-center gap-2 text-slate-500 hover:text-brand-600 font-semibold transition-colors py-2 px-4 rounded-lg hover:bg-slate-50"
+                    className="inline-flex items-center gap-2 text-slate-500 hover:text-[#E09000] font-semibold transition-colors py-2 px-4 rounded-lg hover:bg-slate-50"
                 >
                     <ArrowLeft size={18} />
                     <span>Kembali ke Knowledge Hub</span>

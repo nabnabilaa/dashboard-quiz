@@ -25,7 +25,7 @@ export default function Home() {
       case 'quiz':
         return <QuizScreen onComplete={() => setMode('case-study')} />;
       case 'case-study':
-        return <KnowledgeScreen onNavigate={(target) => { }} />;
+        return <KnowledgeScreen onNavigate={(target) => { if (target === 'visual-menu') setMode('diagram-builder'); }} />;
       case 'diagram-builder':
         if (activeScenario) {
           return (

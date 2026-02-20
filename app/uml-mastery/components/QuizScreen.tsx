@@ -59,7 +59,7 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
             <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
                 {/* Header */}
                 <div className="bg-slate-50 p-6 border-b border-slate-200 flex justify-between items-center">
-                    <div className="flex items-center gap-2 text-brand-600 font-bold uppercase tracking-wider text-sm">
+                    <div className="flex items-center gap-2 text-[#E09000] font-bold uppercase tracking-wider text-sm">
                         <HelpCircle size={18} />
                         Kuis Teori
                     </div>
@@ -90,14 +90,14 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
                                             ? (isCorrect
                                                 ? 'border-green-500 bg-green-50 text-green-800'
                                                 : 'border-red-500 bg-red-50 text-red-800')
-                                            : 'border-slate-200 bg-white hover:border-brand-300 hover:bg-brand-50 text-slate-700'
+                                            : 'border-slate-200 bg-white hover:border-[#FFCF4A] hover:bg-[#FFF8EB] text-slate-700'
                                         }
                                     `}
                                 >
                                     <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold shrink-0 transition-colors
                                         ${isSelected
                                             ? (isCorrect ? 'bg-green-200 text-green-700' : 'bg-red-200 text-red-700')
-                                            : 'bg-slate-100 text-slate-500 group-hover:bg-brand-500 group-hover:text-white'
+                                            : 'bg-slate-100 text-slate-500 group-hover:bg-[#F5A623] group-hover:text-white'
                                         }
                                     `}>
                                         {String.fromCharCode(65 + i)}
@@ -128,7 +128,7 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
                             <div className="mt-6 flex justify-end">
                                 <button
                                     onClick={nextQuestion}
-                                    className="bg-brand-500 hover:bg-brand-600 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg shadow-brand-500/20 flex items-center gap-2"
+                                    className="bg-[#F5A623] hover:bg-[#E09000] text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg shadow-[#F5A623]/20 flex items-center gap-2"
                                 >
                                     <span>{currentIdx < theoryQuestions.length - 1 ? 'Soal Selanjutnya' : 'Selesai'}</span>
                                     <ArrowRight size={18} />

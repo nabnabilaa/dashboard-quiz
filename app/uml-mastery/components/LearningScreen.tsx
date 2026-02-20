@@ -129,16 +129,16 @@ export default function LearningScreen({ onComplete }: LearningScreenProps) {
                                 prose-headings:text-slate-800 prose-headings:font-bold prose-headings:tracking-tight
                                 prose-h3:text-xl prose-h3:mb-3
                                 prose-p:text-slate-600 prose-p:leading-relaxed prose-p:text-base
-                                prose-strong:text-brand-600 prose-strong:font-bold
-                                prose-ul:list-disc prose-ul:pl-5 prose-li:marker:text-brand-500 prose-li:mb-2
+                                prose-strong:text-[#E09000] prose-strong:font-bold
+                                prose-ul:list-disc prose-ul:pl-5 prose-li:marker:text-[#F5A623] prose-li:mb-2
                                 prose-table:border-collapse prose-table:w-full prose-table:my-6 prose-table:shadow-sm prose-table:rounded-lg prose-table:overflow-hidden
-                                prose-th:bg-brand-50 prose-th:p-4 prose-th:text-left prose-th:font-bold prose-th:text-brand-900 prose-th:border-b prose-th:border-brand-100
+                                prose-th:bg-[#FFF8EB] prose-th:p-4 prose-th:text-left prose-th:font-bold prose-th:text-[#7A4A00] prose-th:border-b prose-th:border-[#FFEFC6]
                                 prose-td:p-4 prose-td:border-b prose-td:border-slate-200 prose-td:text-slate-700
-                                [&_blockquote]:border-l-4 [&_blockquote]:border-brand-500 [&_blockquote]:bg-brand-50/50 [&_blockquote]:py-3 [&_blockquote]:px-5 [&_blockquote]:rounded-r-lg [&_blockquote]:text-brand-800 [&_blockquote]:italic
+                                [&_blockquote]:border-l-4 [&_blockquote]:border-[#F5A623] [&_blockquote]:bg-[#FFF8EB]/50 [&_blockquote]:py-3 [&_blockquote]:px-5 [&_blockquote]:rounded-r-lg [&_blockquote]:text-[#945A00] [&_blockquote]:italic
                                 [&_.visual-box]:bg-white [&_.visual-box]:border [&_.visual-box]:border-slate-200 [&_.visual-box]:rounded-xl [&_.visual-box]:p-5 [&_.visual-box]:my-6 [&_.visual-box]:shadow-sm [&_.visual-box]:flex [&_.visual-box]:flex-col [&_.visual-box]:items-center [&_.visual-box]:gap-4
                                 [&_.visual-flow]:flex [&_.visual-flow]:flex-wrap [&_.visual-flow]:gap-3 [&_.visual-flow]:items-center [&_.visual-flow]:justify-center [&_.visual-flow]:my-4
-                                [&_.flow-item]:px-4 [&_.flow-item]:py-2 [&_.flow-item]:bg-white [&_.flow-item]:border [&_.flow-item]:border-brand-200 [&_.flow-item]:rounded-lg [&_.flow-item]:shadow-sm [&_.flow-item]:font-semibold [&_.flow-item]:text-slate-700
-                                [&_.flow-arrow]:text-brand-400 [&_.flow-arrow]:font-bold
+                                [&_.flow-item]:px-4 [&_.flow-item]:py-2 [&_.flow-item]:bg-white [&_.flow-item]:border [&_.flow-item]:border-[#FFDF88] [&_.flow-item]:rounded-lg [&_.flow-item]:shadow-sm [&_.flow-item]:font-semibold [&_.flow-item]:text-slate-700
+                                [&_.flow-arrow]:text-[#F5A623] [&_.flow-arrow]:font-bold
                                 [&_img]:rounded-xl [&_img]:shadow-md"
                                 dangerouslySetInnerHTML={{ __html: slide.content }}
                             />
@@ -157,7 +157,7 @@ export default function LearningScreen({ onComplete }: LearningScreenProps) {
                             "flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold transition-all duration-200 border-2",
                             currentIndex === 0
                                 ? "border-slate-100 text-slate-300 cursor-not-allowed bg-slate-50"
-                                : "border-slate-200 text-slate-600 hover:border-brand-200 hover:bg-brand-50 hover:text-brand-600 active:scale-95"
+                                : "border-slate-200 text-slate-600 hover:border-[#FFDF88] hover:bg-[#FFF8EB] hover:text-[#E09000] active:scale-95"
                         )}
                     >
                         <ArrowLeft size={18} />
@@ -167,10 +167,10 @@ export default function LearningScreen({ onComplete }: LearningScreenProps) {
                     <button
                         onClick={nextSlide}
                         className={cn(
-                            "flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold text-white transition-all duration-200 shadow-lg shadow-brand-500/30 active:scale-95",
+                            "flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold text-white transition-all duration-200 shadow-lg shadow-[#F5A623]/30 active:scale-95",
                             currentIndex === learningSlides.length - 1
                                 ? "bg-green-600 hover:bg-green-700 ring-2 ring-green-600/20"
-                                : "bg-brand-500 hover:bg-brand-600 ring-2 ring-brand-500/20"
+                                : "bg-[#F5A623] hover:bg-[#E09000] ring-2 ring-[#F5A623]/20"
                         )}
                     >
                         <span>{currentIndex === learningSlides.length - 1 ? "Selesai & Lanjut Kuis" : "Selanjutnya"}</span>
