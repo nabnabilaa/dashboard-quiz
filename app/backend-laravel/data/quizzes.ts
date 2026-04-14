@@ -8,179 +8,179 @@ export interface Question {
 }
 
 export const quizQuestions: Question[] = [
-    // Module 1: Dasar Backend & HTTP
+    // Module 1: Backend Basics & HTTP
     {
         id: 1,
-        question: "Dalam analogi restoran, Backend diibaratkan sebagai apa?",
-        options: ["Ruang Makan (Frontend)", "Buku Menu (API Doc)", "Dapur (Server/Database)", "Kasir (Payment Gateway)"],
+        question: "In the restaurant analogy, what does the Backend represent?",
+        options: ["Dining Room (Frontend)", "Menu Book (API Doc)", "Kitchen (Server/Database)", "Cashier (Payment Gateway)"],
         correctAnswer: 2,
-        explanation: "Backend adalah dapur tempat data diolah, tidak terlihat oleh pelanggan (user)."
+        explanation: "The Backend is the kitchen where data is processed, hidden from the customer (user)."
     },
     {
         id: 2,
-        question: "Manakah metode HTTP yang TEPAT untuk memperbarui data yang sudah ada?",
+        question: "Which HTTP method is APPROPRIATE for updating existing data?",
         options: ["GET", "POST", "PUT/PATCH", "DELETE"],
         correctAnswer: 2,
-        explanation: "PUT/PATCH digunakan untuk update resource. POST untuk create baru."
+        explanation: "PUT/PATCH is used to update resources. POST is for creating new ones."
     },
 
-    // Module 2: Pengenalan Laravel & MVC
+    // Module 2: Introduction to Laravel & MVC
     {
         id: 3,
-        question: "Di folder manakah file konfigurasi sensitif seperti password database disimpan?",
+        question: "In which file are sensitive configurations like database passwords stored?",
         options: ["config/database.php", ".env", "app/Config.php", "public/.htaccess"],
         correctAnswer: 1,
-        explanation: ".env menyimpan environment variables yang tidak boleh di-commit ke Git."
+        explanation: ".env stores environment variables that should not be committed to Git."
     },
     {
         id: 4,
-        question: "Huruf 'C' dalam MVC mewakili Controller. Apa tugas utamanya?",
-        options: ["Menyimpan data ke tabel", "Menampilkan warna dan font (CSS)", "Mengatur alur logika antara Request, Model, dan View", "Membuat token keamanan"],
+        question: "The letter 'C' in MVC stands for Controller. What is its main task?",
+        options: ["Saving data to tables", "Displaying colors and fonts (CSS)", "Managing logic flow between Request, Model, and View", "Creating security tokens"],
         correctAnswer: 2,
-        explanation: "Controller adalah pengatur lalu lintas data dan logika."
+        explanation: "The Controller orchestrates data traffic and logic."
     },
 
-    // Module 3: Routing & Controller
+    // Module 3: Routing & Controllers
     {
         id: 5,
-        question: "Perintah Artisan apa yang membuat Controller beserta 7 method CRUD siap pakai?",
-        options: ["php artisan make:controller Nama --basic", "php artisan make:controller Nama --resource", "php artisan create:controller Nama", "php artisan make:crud Nama"],
+        question: "Which Artisan command creates a Controller with 7 ready-to-use CRUD methods?",
+        options: ["php artisan make:controller Name --basic", "php artisan make:controller Name --resource", "php artisan create:controller Name", "php artisan make:crud Name"],
         correctAnswer: 1,
-        explanation: "Flag --resource membuat controller dengan index, create, store, show, edit, update, dan destroy."
+        explanation: "The --resource flag creates a controller with index, create, store, show, edit, update, and destroy."
     },
     {
         id: 6,
-        question: "Jika Anda memiliki Route::resource('produk', ...), URL mana yang digunakan untuk menghapus data?",
+        question: "If you have Route::resource('produk', ...), which URL is used to delete data?",
         options: ["GET /produk/hapus/{id}", "POST /produk/delete/{id}", "DELETE /produk/{id}", "PUT /produk/{id}"],
         correctAnswer: 2,
-        explanation: "Sesuai standar RESTful, menghapus data menggunakan verb DELETE ke URL resource/{id}."
+        explanation: "Following RESTful standards, deleting data uses the DELETE verb on the resource/{id} URL."
     },
 
     // Module 4: View & Blade
     {
         id: 7,
-        question: "Direktif Blade apa yang WAJIB ada di setiap form POST untuk keamanan?",
+        question: "Which Blade directive is MANDATORY in every POST form for security?",
         options: ["@koneksi", "@csrf", "@secure", "@auth"],
         correctAnswer: 1,
-        explanation: "@csrf menghasilkan token untuk mencegah serangan Cross-Site Request Forgery."
+        explanation: "@csrf generates a token to prevent Cross-Site Request Forgery attacks."
     },
     {
         id: 8,
-        question: "Apa fungsi dari syntax {{ $nama }} di Blade?",
-        options: ["Menjalankan kode JavaScript", "Mencetak variabel dengan escaping (aman dari XSS)", "Mencetak HTML mentah", "Membuat komentar"],
+        question: "What is the function of the {{ $name }} syntax in Blade?",
+        options: ["Running JavaScript code", "Printing variables with escaping (XSS safe)", "Printing raw HTML", "Creating comments"],
         correctAnswer: 1,
-        explanation: "Kurung kurawal ganda {{ }} setara dengan htmlspecialchars() di PHP."
+        explanation: "Double curly braces {{ }} are equivalent to htmlspecialchars() in PHP."
     },
 
-    // Module 5: Database & Migrasi
+    // Module 5: Databases & Migrations
     {
         id: 9,
-        question: "Perintah 'php artisan migrate:fresh' akan melakukan apa?",
-        options: ["Membuat migrasi baru", "Hanya menjalankan migrasi yang belum jalan", "MENGHAPUS semua tabel dan migrasi ulang dari nol", "Memperbarui data tanpa menghapus tabel"],
+        question: "What does the 'php artisan migrate:fresh' command do?",
+        options: ["Creates a new migration", "Only runs pending migrations", "DELETES all tables and re-migrates from scratch", "Updates data without deleting tables"],
         correctAnswer: 2,
-        explanation: "Hati-hati! :fresh akan menghapus (drop) semua tabel sebelum migrasi ulang."
+        explanation: "Careful! :fresh will drop all tables before re-running migrations."
     },
     {
         id: 10,
-        question: "Method 'up()' dalam file migrasi digunakan untuk?",
-        options: ["Menghapus tabel", "Membuat atau memodifikasi tabel", "Mengisi data palsu", "Mengupdate composer"],
+        question: "The 'up()' method in a migration file is used for?",
+        options: ["Deleting tables", "Creating or modifying tables", "Seeding fake data", "Updating composer"],
         correctAnswer: 1,
-        explanation: "Method up() berisi definisi perubahan skema (misal create table), sedangkan down() untuk membatalkannya."
+        explanation: "The up() method contains schema definitions (e.g., create table), while down() is for reversing them."
     },
 
     // Module 6: Eloquent ORM
     {
         id: 11,
-        question: "Properti apa yang harus diatur di Model untuk mengizinkan Mass Assignment?",
+        question: "Which property must be set in the Model to allow Mass Assignment?",
         options: ["$table", "$fillable", "$hidden", "$casts"],
         correctAnswer: 1,
-        explanation: "$fillable menentukan kolom mana saja yang boleh diisi secara massal (array)."
+        explanation: "$fillable defines which columns can be mass-filled via an array."
     },
     {
         id: 12,
-        question: "Bagaimana cara mengambil satu data berdasarkan Primary Key di Eloquent?",
+        question: "How do you retrieve a single record by its Primary Key in Eloquent?",
         options: ["Product::get(1)", "Product::where('id', 1)", "Product::find(1)", "Product::search(1)"],
         correctAnswer: 2,
-        explanation: "Product::find($id) adalah cara paling ringkas mencari berdasarkan Primary Key."
+        explanation: "Product::find($id) is the most concise way to find a record by its Primary Key."
     },
 
-    // Module 7: Studi Kasus CRUD
+    // Module 7: CRUD Case Study
     {
         id: 13,
-        question: "Dalam method store(), setelah data berhasil disimpan, biasanya kita melakukan?",
-        options: ["return view('index')", "return redirect()->route('index')", "echo 'Sukses'", "exit()"],
+        question: "In the store() method, after data is successfully saved, we usually do what?",
+        options: ["return view('index')", "return redirect()->route('index')", "echo 'Success'", "exit()"],
         correctAnswer: 1,
-        explanation: "Redirect (PRG Pattern) mencegah user mensubmit ulang form jika me-refresh halaman."
+        explanation: "Redirecting (PRG Pattern) prevents the user from resubmitting the form if they refresh the page."
     },
     {
         id: 14,
-        question: "Method controller 'edit($id)' bertugas untuk?",
-        options: ["Menyimpan perubahan ke database", "Menampilkan form edit dengan data lama", "Menghapus data", "Memvalidasi input"],
+        question: "What is the primary responsibility of the 'edit($id)' controller method?",
+        options: ["Saving changes to the database", "Displaying the edit form with old data", "Deleting data", "Validating input"],
         correctAnswer: 1,
-        explanation: "Method edit bertujuan menampilkan Form (View), sedangkan update yang memproses datanya."
+        explanation: "The edit method is intended to display the Form (View), while update processes the actual data."
     },
 
     // Module 8: REST API
     {
         id: 15,
-        question: "HTTP Status Code 201 berarti?",
-        options: ["OK (Berhasil)", "Created (Berhasil dibuat)", "No Content", "Bad Request"],
+        question: "What does HTTP Status Code 201 mean?",
+        options: ["OK (Success)", "Created (Successfully created)", "No Content", "Bad Request"],
         correctAnswer: 1,
-        explanation: "201 Created adalah status standar saat resource baru berhasil dibuat (biasanya via POST)."
+        explanation: "201 Created is the standard status when a new resource is successfully created (usually via POST)."
     },
     {
         id: 16,
-        question: "Apa perbedaan utama Controller API dibanding Web?",
-        options: ["API me-return JSON, Web me-return View (HTML)", "API tidak butuh Route", "API tidak bisa pakai Database", "Tidak ada bedanya"],
+        question: "What is the main difference between an API Controller and a Web Controller?",
+        options: ["API returns JSON, Web returns View (HTML)", "API doesn't need Routes", "API cannot use Databases", "There is no difference"],
         correctAnswer: 0,
-        explanation: "API ditujukan untuk konsumsi mesin/aplikasi lain (JSON), Web untuk manusia (HTML)."
+        explanation: "APIs are intended for machine/application consumption (JSON), while Web is for humans (HTML)."
     },
 
-    // Module 9: Validasi
+    // Module 9: Validation
     {
         id: 17,
-        question: "Jika validasi gagal pada Request API, Laravel otomatis mengembalikan status code?",
+        question: "If validation fails on an API Request, Laravel automatically returns which status code?",
         options: ["200 OK", "500 Server Error", "404 Not Found", "422 Unprocessable Entity"],
         correctAnswer: 3,
-        explanation: "422 adalah standar untuk kesalahan validasi input."
+        explanation: "422 is the standard code for input validation errors."
     },
     {
         id: 18,
-        question: "Cara mengambil pesan error validasi input 'email' di Blade adalah?",
+        question: "How do you retrieve the validation error message for the 'email' input in Blade?",
         options: ["@error('email') ... @enderror", "@if($email) ... @endif", "{{ $error->email }}", "@validate('email')"],
         correctAnswer: 0,
-        explanation: "Direktif @error('field') memudahkan pengecekan dan menampilkan pesan error spesifik."
+        explanation: "The @error('field') directive makes it easy to check and display specific error messages."
     },
 
     // Module 10: Auth & Security
     {
         id: 19,
-        question: "Middleware 'auth' berfungsi untuk?",
-        options: ["Mempercepat loading", "Mengizinkan semua orang masuk", "Memastikan hanya user yang login yang bisa akses", "Mengenkripsi password"],
+        question: "What is the purpose of the 'auth' middleware?",
+        options: ["To speed up loading", "To allow everyone access", "To ensure only logged-in users can access", "To encrypt passwords"],
         correctAnswer: 2,
-        explanation: "Middleware auth bertindak sebagai satpam yang mengecek sesi login user."
+        explanation: "The auth middleware acts as a guard checking the user's login session."
     },
     {
         id: 20,
-        question: "Helper untuk mendapatkan data user yang sedang login adalah?",
+        question: "Which helper is used to get the currently authenticated user's data?",
         options: ["User::now()", "Auth::user()", "Session::get('user')", "Request::user_id()"],
         correctAnswer: 1,
-        explanation: "Auth::user() mengembalikan objek model User yang sedang terautentikasi."
+        explanation: "Auth::user() returns the currently authenticated User model object."
     },
 
-    // Module 11: Testing Postman
+    // Module 11: Postman Testing
     {
         id: 21,
-        question: "Header apa yang perlu ditambahkan di Postman agar Laravel merespon dengan JSON?",
+        question: "Which header should be added in Postman to ensure Laravel responds with JSON?",
         options: ["Content-Type: text/html", "Accept: application/json", "Authorization: Bearer", "User-Agent: Postman"],
         correctAnswer: 1,
-        explanation: "Header Accept: application/json memberitahu Laravel bahwa klien mengharapkan respon JSON."
+        explanation: "The Accept: application/json header tells Laravel that the client expects a JSON response."
     },
     {
         id: 22,
-        question: "Fitur Postman untuk menyimpan request agar bisa dipakai lagi disebut?",
+        question: "What is the Postman feature called that allows saving requests for reuse?",
         options: ["History", "Collection", "Environment", "Preset"],
         correctAnswer: 1,
-        explanation: "Collection memungkinkan kita mengelompokkan dan menyimpan request API untuk penggunaan berulang."
+        explanation: "Collections allow grouping and saving API requests for repeated use."
     }
 ];

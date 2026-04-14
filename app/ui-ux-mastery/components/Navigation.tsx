@@ -5,16 +5,16 @@ import { cn } from '@backend/lib/utils';
 import { motion } from 'framer-motion';
 
 interface NavigationProps {
-    phase: 'fondasi' | 'kuis' | 'fixer';
-    setPhase: (phase: 'fondasi' | 'kuis' | 'fixer') => void;
+    phase: 'material' | 'quiz' | 'fixer';
+    setPhase: (phase: 'material' | 'quiz' | 'fixer') => void;
 }
 
 export const Navigation: React.FC<NavigationProps> = ({ phase, setPhase }) => {
     const navItems = [
         { id: 'home', label: 'Main Menu', icon: ArrowLeft, href: '/' },
-        { id: 'fondasi', label: 'Materi', icon: Layers },
-        { id: 'kuis', label: 'Kuis', icon: Lightbulb },
-        { id: 'fixer', label: 'Studi Kasus', icon: PenTool },
+        { id: 'material', label: 'Material', icon: Layers },
+        { id: 'quiz', label: 'Quiz', icon: Lightbulb },
+        { id: 'fixer', label: 'Case Studies', icon: PenTool },
     ];
 
     return (

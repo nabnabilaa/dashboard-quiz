@@ -90,14 +90,14 @@ export const VisualQuiz = () => {
     const nextQuestion = () => {
         setStatus('idle');
         if (qIdx < quizzes.length - 1) setQIdx(qIdx + 1);
-        else alert("Selamat! Anda telah menaklukkan Hard Mode Quiz.");
+        else alert("Congratulations! You have conquered the Hard Mode Quiz.");
     };
 
     return (
         <div className="flex min-h-[500px] flex-col justify-center rounded-[20px] border border-white bg-white p-6 md:p-10 shadow-md">
             <div className="mx-auto w-full max-w-[600px]">
                 <div className="mb-5 flex justify-between text-xs font-bold text-slate-500">
-                    <span>SOAL {qIdx + 1} / {quizzes.length}</span>
+                    <span>QUESTION {qIdx + 1} / {quizzes.length}</span>
                     <span className="rounded border border-red-500 px-1.5 py-0.5 text-red-500">
                         HARD MODE
                     </span>
@@ -131,7 +131,7 @@ export const VisualQuiz = () => {
                         >
                             {opt.t}
                             {status === 'wrong' && !opt.c && (
-                                <span className="text-xs font-bold text-red-600">Salah</span>
+                                <span className="text-xs font-bold text-red-600">Wrong</span>
                             )}
                             {status === 'correct' && opt.c && <Check size={20} className="text-emerald-600" />}
                         </button>
@@ -141,7 +141,7 @@ export const VisualQuiz = () => {
                 {status === 'wrong' && (
                     <div className="animate-slide-up mt-5 rounded-lg bg-red-50 p-4 text-center font-semibold text-red-700">
                         <AlertCircle size={20} className="mr-1.5 inline align-middle" />
-                        Analisis lagi visualnya. Masih kurang tepat.
+                        Analyze the visual again. Not quite right.
                     </div>
                 )}
 
@@ -155,7 +155,7 @@ export const VisualQuiz = () => {
                             onClick={nextQuestion}
                             className="mt-5 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-indigo-600 py-2.5 text-sm font-semibold text-white transition-all hover:bg-indigo-700"
                         >
-                            Lanjut Soal Berikutnya <ArrowRight size={16} />
+                            Continue to Next Question <ArrowRight size={16} />
                         </button>
                     </div>
                 )}

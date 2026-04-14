@@ -29,7 +29,7 @@
         "./app/backend-laravel/*"
       ],
       "@belajar/*": [
-        "./app/belajaruiux/*"
+        "./app/ui-ux-mastery/*"
       ],
       "@hacking/*": [
         "./app/ethical-hacking/*"

@@ -28,92 +28,92 @@ const colorVariants: any = {
 const modules = [
     {
         id: 1,
-        title: "Pengantar Ethical Hacking",
-        desc: "Dasar-dasar etika hacking, perbedaan Hacker vs Cracker, dan legalitas.",
+        title: "Introduction to Ethical Hacking",
+        desc: "Fundamentals of hacking ethics, differences between Hacker vs Cracker, and legalities.",
         icon: "fa-user-secret",
         color: "blue",
     },
     {
         id: 2,
-        title: "Metodologi Pentest",
-        desc: "7 tahapan penetration testing dari planning hingga remediation.",
+        title: "Pentest Methodology",
+        desc: "7 stages of penetration testing from planning to remediation.",
         icon: "fa-clipboard-list",
         color: "purple",
     },
     {
         id: 3,
         title: "Reconnaissance",
-        desc: "Teknik pengumpulan informasi pasif dan aktif (OSINT).",
+        desc: "Passive and active information gathering techniques (OSINT).",
         icon: "fa-search",
         color: "cyan",
     },
     {
         id: 4,
         title: "Scanning & Enumeration",
-        desc: "Nmap, port scanning, dan service detection.",
+        desc: "Nmap, port scanning, and service detection.",
         icon: "fa-radar",
         color: "orange",
     },
     {
         id: 5,
-        title: "Dasar Eksploitasi",
-        desc: "Metasploit, payload, dan post-exploitation.",
+        title: "Exploitation Basics",
+        desc: "Metasploit, payloads, and post-exploitation.",
         icon: "fa-bomb",
         color: "teal",
     },
     {
         id: 6,
         title: "OSI Fundamentals",
-        desc: "Model OSI 7 layer, attack vectors, dan defense strategies.",
+        desc: "7-layer OSI model, attack vectors, and defense strategies.",
         icon: "fa-shield-alt",
         color: "rose",
     },
     {
         id: 7,
         title: "Injection Attacks",
-        desc: "SQL Injection, XXE, OS Command Injection - eksploitasi dan mitigasi.",
+        desc: "SQL Injection, XXE, OS Command Injection - exploitation and mitigation.",
         icon: "fa-wifi",
         color: "indigo",
     },
     {
         id: 8,
         title: "Client-Side Vulnerabilities",
-        desc: "XSS, CSRF, CORS misconfiguration - serangan pada browser.",
+        desc: "XSS, CSRF, CORS misconfiguration - browser-based attacks.",
         icon: "fa-user-check",
         color: "emerald",
     },
     {
         id: 9,
         title: "Infrastructure & Server-Side",
-        desc: "SSRF, HTTP Request Smuggling - eksploitasi infrastruktur server.",
+        desc: "SSRF, HTTP Request Smuggling - server infrastructure exploitation.",
         icon: "fa-bug",
         color: "amber",
     },
     {
         id: 10,
         title: "Auth, Logic & Advanced Threats",
-        desc: "OAuth, JWT, LLM attacks, dan business logic flaws modern.",
+        desc: "OAuth, JWT, LLM attacks, and modern business logic flaws.",
         icon: "fa-lock",
         color: "violet",
     },
     {
         id: 11,
         title: "Red Team vs Blue Team Lifecycle",
-        desc: "Kill chain lengkap dari reconnaissance hingga post-exploitation.",
+        desc: "Complete kill chain from reconnaissance to post-exploitation.",
         icon: "fa-gavel",
         color: "pink",
     },
     {
         id: 12,
         title: "Attack Scenarios (Red vs Blue Labs)",
-        desc: "Hands-on labs: Brute Force, SQLi, IDOR, XSS, File Upload, dan lainnya.",
+        desc: "Hands-on labs: Brute Force, SQLi, IDOR, XSS, File Upload, and more.",
         icon: "fa-graduation-cap",
         color: "sky",
     },
     {
         id: 13,
-        title: "Materi Tambahan: Hacker vs Defender",
-        desc: "Perspektif lengkap serangan dan pertahanan dalam keamanan web modern.",
+        title: "Supplementary Material: Hacker vs Defender",
+        desc: "Complete perspective on attacks and defenses in modern web security.",
         icon: "fa-balance-scale",
         color: "fuchsia",
     },
@@ -176,7 +176,7 @@ export default function Dashboard() {
                         className="inline-flex items-center gap-2 text-slate-500 hover:text-brand-500 transition-colors group"
                     >
                         <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                        <span className="font-medium">Kembali ke Menu Utama</span>
+                        <span className="font-medium">Back to Main Menu</span>
                     </Link>
                 </div>
                 <div className="max-w-7xl mx-auto px-4 w-full flex-1 flex items-center">
@@ -185,18 +185,17 @@ export default function Dashboard() {
                         <div className="z-10 order-2 lg:order-1">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-500 text-xs font-mono font-semibold mb-6">
                                 <span className="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
-                                KELAS CYBER SECURITY DASAR
+                                BASIC CYBER SECURITY COURSE
                             </div>
 
                             <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight text-white">
-                                Lindungi Aset <br />
+                                Protect Assets <br />
                                 <Typewriter />
                             </h1>
 
                             <p className="text-lg text-slate-400 mb-8 max-w-lg leading-relaxed">
-                                Pelajari fundamental keamanan siber, etika hacking, dan pertahanan
-                                jaringan. Materi disusun khusus untuk pemula yang ingin memulai
-                                karir di bidang keamanan informasi.
+                                Learn the fundamentals of cybersecurity, ethical hacking, and network defense.
+                                Material specifically designed for beginners starting a career in info security.
                             </p>
 
                             <div className="flex flex-wrap gap-4">
@@ -204,13 +203,13 @@ export default function Dashboard() {
                                     href="#curriculum"
                                     className="bg-white text-[#0B1F3A] px-8 py-4 rounded-lg font-bold hover:bg-slate-50 transition flex items-center gap-2 shadow-lg"
                                 >
-                                    Mulai Belajar <i className="fas fa-arrow-right"></i>
+                                    Start Learning <i className="fas fa-arrow-right"></i>
                                 </a>
                                 <a
                                     href="#about"
                                     className="px-8 py-4 rounded-lg font-bold border border-white/5 hover:border-brand-500 hover:text-brand-500 transition"
                                 >
-                                    Tentang Kelas
+                                    About Course
                                 </a>
                             </div>
 
@@ -218,7 +217,7 @@ export default function Dashboard() {
                             <div className="mt-12 flex gap-8 border-t border-white/5 pt-8">
                                 <div>
                                     <div className="text-3xl font-bold text-white">13</div>
-                                    <div className="text-sm text-slate-500">Modul Utama</div>
+                                    <div className="text-sm text-slate-500">Main Modules</div>
                                 </div>
 
                                 <div>
@@ -244,11 +243,11 @@ export default function Dashboard() {
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold text-white mb-4">
-                            Mengapa Belajar Cyber Security?
+                            Why Learn Cyber Security?
                         </h2>
                         <p className="text-slate-400 max-w-2xl mx-auto">
-                            Keamanan data bukan lagi pilihan, melainkan kebutuhan. Pahami konsep
-                            dasarnya sebelum melangkah ke teknik lanjutan.
+                            Data security is no longer an option, but a necessity. Understand the
+                            basic concepts before moving on to advanced techniques.
                         </p>
                     </div>
 
@@ -258,11 +257,10 @@ export default function Dashboard() {
                                 <i className="fas fa-user-lock text-2xl text-blue-400"></i>
                             </div>
                             <h3 className="text-xl font-bold text-white mb-3">
-                                Proteksi Data
+                                Data Protection
                             </h3>
                             <p className="text-slate-400 text-sm leading-relaxed">
-                                Memahami cara melindungi informasi sensitif pribadi dan organisasi
-                                dari pencurian.
+                                Understanding how to protect sensitive personal and organizational information from theft.
                             </p>
                         </div>
 
@@ -271,11 +269,10 @@ export default function Dashboard() {
                                 <i className="fas fa-laptop-code text-2xl text-cyan-400"></i>
                             </div>
                             <h3 className="text-xl font-bold text-white mb-3">
-                                Pencegahan Serangan
+                                Attack Prevention
                             </h3>
                             <p className="text-slate-400 text-sm leading-relaxed">
-                                Mempelajari pola serangan umum seperti Phishing dan Malware untuk
-                                melakukan mitigasi.
+                                Learning common attack patterns like Phishing and Malware for mitigation.
                             </p>
                         </div>
 
@@ -284,11 +281,10 @@ export default function Dashboard() {
                                 <i className="fas fa-briefcase text-2xl text-teal-400"></i>
                             </div>
                             <h3 className="text-xl font-bold text-white mb-3">
-                                Peluang Karir
+                                Career Opportunities
                             </h3>
                             <p className="text-slate-400 text-sm leading-relaxed">
-                                Permintaan tenaga ahli keamanan siber terus meningkat di era
-                                digital saat ini.
+                                The demand for cybersecurity experts continues to rise in today's digital era.
                             </p>
                         </div>
                     </div>
@@ -301,10 +297,10 @@ export default function Dashboard() {
                     <div className="flex flex-col md:flex-row justify-between items-end mb-12">
                         <div>
                             <h2 className="text-3xl font-bold text-white mb-2">
-                                Kurikulum Pembelajaran
+                                Learning Curriculum
                             </h2>
                             <p className="text-slate-400">
-                                13 Modul lengkap yang disusun secara sistematis untuk pemula.
+                                13 comprehensive modules systematically arranged for beginners.
                             </p>
                         </div>
                     </div>
@@ -326,7 +322,7 @@ export default function Dashboard() {
                                     <span
                                         className={`text-xs font-mono ${cv.text} mb-2 block`}
                                     >
-                                        MODUL {mod.id}
+                                        MODULE {mod.id}
                                     </span>
                                     <h3
                                         className={`text-xl font-bold text-white mb-2 ${cv.groupHoverText} transition-colors`}
@@ -352,15 +348,15 @@ export default function Dashboard() {
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="flex flex-col md:flex-row justify-between items-end md:items-center mb-12 gap-4">
                         <div>
-                            <h2 className="text-3xl font-bold text-white mb-2">Library Tools</h2>
-                            <p className="text-slate-400">Kumpulan tool audit mencakup Network, Application, dan Performance.</p>
+                            <h2 className="text-3xl font-bold text-white mb-2">Tools Library</h2>
+                            <p className="text-slate-400">Collection of audit tools covering Network, Application, and Performance.</p>
                         </div>
                         <div className="flex gap-2 bg-dark-card p-1 rounded-lg border border-white/5">
                             <button
                                 onClick={() => setToolFilter('all')}
                                 className={`px-4 py-2 text-sm font-medium rounded transition-colors ${toolFilter === 'all' ? 'text-white bg-brand-600' : 'text-slate-400 hover:text-white bg-transparent'}`}
                             >
-                                Semua
+                                All
                             </button>
                             <button
                                 onClick={() => setToolFilter('web')}
@@ -400,7 +396,7 @@ export default function Dashboard() {
                                 <p className="text-sm text-slate-400 mb-4 flex-1 line-clamp-2">{tool.desc}</p>
 
                                 <div className="text-xs text-slate-500 flex items-center gap-1 border-t border-white/5 pt-3">
-                                    {tool.type === 'web' ? 'Klik untuk buka website' : 'Klik untuk lihat command'}
+                                    {tool.type === 'web' ? 'Click to open website' : 'Click to view command'}
                                     <i className="fas fa-arrow-right ml-auto opacity-0 group-hover:opacity-100 transition-opacity"></i>
                                 </div>
                             </div>
@@ -443,13 +439,13 @@ export default function Dashboard() {
                                 onClick={() => setSelectedTool(null)}
                                 className="px-4 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-colors font-medium"
                             >
-                                Batal
+                                Cancel
                             </button>
                             <button
                                 onClick={confirmToolAction}
                                 className="px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-bold shadow-lg shadow-brand-500/20 transition-all flex items-center gap-2"
                             >
-                                Buka Dokumentasi <i className="fas fa-external-link-alt"></i>
+                                Open Documentation <i className="fas fa-external-link-alt"></i>
                             </button>
                         </div>
                     </div>

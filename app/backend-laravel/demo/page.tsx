@@ -22,21 +22,21 @@ export default function LiveDemoPage() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                         </span>
-                        Versi Terbaru
+                        Latest Version
                     </div>
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
-                        Membuat Project Laravel 12
+                        Creating a Laravel 12 Project
                     </h1>
                     <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                        Langkah demi langkah memulai project baru dari nol hingga tampil di browser.
+                        Step-by-step guide to starting a new project from scratch to browser.
                     </p>
                 </div>
 
-                {/* Step 1: Prasyarat & Install */}
+                {/* Step 1: Prerequisites & Install */}
                 <section className="space-y-6">
                     <h2 className="text-2xl font-bold flex items-center gap-3 text-slate-800">
                         <span className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-600 text-white text-sm">1</span>
-                        Prasyarat & Instalasi
+                        Prerequisites & Installation
                     </h2>
 
                     <div className="grid md:grid-cols-2 gap-6">
@@ -46,13 +46,13 @@ export default function LiveDemoPage() {
                             </h3>
                             <ul className="space-y-2 text-sm text-slate-600">
                                 <li className="flex items-start gap-2">
-                                    <span className="text-green-600">✓</span> PHP &gt;= 8.2 (Wajib)
+                                    <span className="text-green-600">✓</span> PHP &gt;= 8.2 (Required)
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-green-600">✓</span> Composer (Dependency Manager)
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-slate-400">•</span> Node.js & NPM (Opsional)
+                                    <span className="text-slate-400">•</span> Node.js & NPM (Optional)
                                 </li>
                             </ul>
                         </div>
@@ -63,18 +63,18 @@ export default function LiveDemoPage() {
                             </h3>
                             <div className="space-y-4">
                                 <div>
-                                    <p className="text-xs text-slate-500 mb-1">Cara umum (Stable):</p>
+                                    <p className="text-xs text-slate-500 mb-1">Standard Method (Stable):</p>
                                     <div className="overflow-x-auto">
                                         <SyntaxHighlighter language="bash" style={vscDarkPlus} customStyle={{ margin: 0, borderRadius: '0.5rem', fontSize: '0.8rem' }}>
-                                            composer create-project laravel/laravel nama-project
+                                            composer create-project laravel/laravel project-name
                                         </SyntaxHighlighter>
                                     </div>
                                 </div>
                                 <div>
-                                    <p className="text-xs text-slate-500 mb-1">Versi Spesifik (Laravel 12):</p>
+                                    <p className="text-xs text-slate-500 mb-1">Specific Version (Laravel 12):</p>
                                     <div className="overflow-x-auto">
                                         <SyntaxHighlighter language="bash" style={vscDarkPlus} customStyle={{ margin: 0, borderRadius: '0.5rem', fontSize: '0.8rem' }}>
-                                            composer create-project laravel/laravel:^12.0 nama-project
+                                            composer create-project laravel/laravel:^12.0 project-name
                                         </SyntaxHighlighter>
                                     </div>
                                 </div>
@@ -87,7 +87,7 @@ export default function LiveDemoPage() {
                 <section className="space-y-6">
                     <h2 className="text-2xl font-bold flex items-center gap-3 text-slate-800">
                         <span className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-600 text-white text-sm">2</span>
-                        Menjalankan Server
+                        Running the Server
                     </h2>
                     <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg">
                         <div className="flex items-center gap-2 px-4 py-2 bg-slate-800 border-b border-slate-700">
@@ -97,10 +97,10 @@ export default function LiveDemoPage() {
                             <span className="text-xs text-slate-400 ml-2">Terminal</span>
                         </div>
                         <div className="p-4 font-mono text-sm">
-                            <div className="text-slate-500"># Masuk ke folder project</div>
-                            <div className="text-white mb-2">cd nama-project</div>
+                            <div className="text-slate-500"># Enter project folder</div>
+                            <div className="text-white mb-2">cd project-name</div>
 
-                            <div className="text-slate-500"># Nyalakan server development</div>
+                            <div className="text-slate-500"># Start development server</div>
                             <div className="text-white mb-4">php artisan serve</div>
 
                             <div className="text-green-400">INFO Server running on [http://127.0.0.1:8000].</div>
@@ -117,7 +117,7 @@ export default function LiveDemoPage() {
                         </div>
                         <div>
                             <h2 className="text-3xl font-bold text-slate-900">Hands On Tutorial</h2>
-                            <p className="text-slate-600">Membuat Web Post Sederhana (Input & Tampil Data)</p>
+                            <p className="text-slate-600">Creating a Simple Post Web App (Input & Display Data)</p>
                         </div>
                     </div>
 
@@ -126,10 +126,10 @@ export default function LiveDemoPage() {
                         {/* 1. Database Config */}
                         <div className="relative pl-8 border-l border-slate-200 space-y-6">
                             <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-pink-500 border-4 border-white"></div>
-                            <h3 className="text-xl font-bold text-pink-600">1. Konfigurasi Database</h3>
+                            <h3 className="text-xl font-bold text-pink-600">1. Database Configuration</h3>
 
                             <div className="space-y-4">
-                                <p className="text-slate-600">Sebelum mulai, setting koneksi database di file <code>.env</code>. Untuk latihan ini, kita pakai MySQL default.</p>
+                                <p className="text-slate-600">Before starting, set up the database connection in the <code>.env</code> file. For this exercise, we'll use the default MySQL.</p>
 
                                 <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
                                     <div className="text-xs text-slate-500 mb-2">.env</div>
@@ -138,7 +138,7 @@ export default function LiveDemoPage() {
                                             {`DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=nama_project_db
+DB_DATABASE=project_name_db
 DB_USERNAME=root
 DB_PASSWORD=`}
                                         </SyntaxHighlighter>
@@ -148,7 +148,7 @@ DB_PASSWORD=`}
                                 <div className="bg-yellow-500/10 border border-yellow-500/20 p-4 rounded-lg flex items-start gap-3">
                                     <Database className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
                                     <div className="text-sm text-yellow-800">
-                                        <strong>Penting:</strong> Pastikan kamu sudah membuat database kosong bernama <code>nama_project_db</code> di phpMyAdmin atau aplikasi database manager kamu sebelum lanjut.
+                                        <strong>Important:</strong> Make sure you have created an empty database named <code>project_name_db</code> in phpMyAdmin or your database manager before proceeding.
                                     </div>
                                 </div>
                             </div>
@@ -160,7 +160,7 @@ DB_PASSWORD=`}
                             <h3 className="text-xl font-bold text-pink-600">2. Model & Migration</h3>
 
                             <div className="space-y-4">
-                                <p className="text-slate-600">Buat Model sekaligus Migration dengan flag <code>-m</code>:</p>
+                                <p className="text-slate-600">Create a Model and Migration simultaneously with the <code>-m</code> flag:</p>
                                 <div className="overflow-x-auto">
                                     <SyntaxHighlighter language="bash" style={vscDarkPlus} customStyle={{ borderRadius: '0.75rem' }}>
                                         php artisan make:model Post -m
@@ -188,7 +188,7 @@ DB_PASSWORD=`}
                                         <SyntaxHighlighter language="php" style={vscDarkPlus} customStyle={{ borderRadius: '0.75rem', fontSize: '0.8rem' }}>
                                             {`class Post extends Model
 {
-    // Boleh isi semua kolom (Mass Assignment)
+    // Allow all columns to be filled (Mass Assignment)
     protected $guarded = [];
 }`}
                                         </SyntaxHighlighter>
@@ -198,7 +198,7 @@ DB_PASSWORD=`}
                                 <div className="bg-blue-50 border border-blue-100 p-4 rounded-lg flex items-center gap-3">
                                     <Terminal className="w-5 h-5 text-blue-500 flex-shrink-0" />
                                     <div className="text-sm text-blue-800">
-                                        Sekarang jalankan perintah ini untuk membuat tabel di database:
+                                        Now run this command to create the tables in the database:
                                         <div className="mt-2">
                                             <code className="bg-blue-900 px-2 py-1 rounded text-white font-mono">php artisan migrate</code>
                                         </div>
@@ -226,12 +226,12 @@ DB_PASSWORD=`}
 use Illuminate\\Http\\Request;
 
 class PostController extends Controller {
-  // Tampilkan data
+  // Display data
   public function index() {
     return view('posts.index', ['posts' => Post::all()]);
   }
 
-  // Simpan data
+  // Save data
   public function store(Request $request) {
     Post::create($request->all());
     return back();
@@ -263,25 +263,25 @@ Route::post('/posts', [PostController::class, 'store']);`}
                         {/* 5. View */}
                         <div className="relative pl-8 border-l border-slate-200 space-y-6">
                             <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-pink-500 border-4 border-white"></div>
-                            <h3 className="text-xl font-bold text-pink-600">5. Tampilan (Blade View)</h3>
+                            <h3 className="text-xl font-bold text-pink-600">5. Visuals (Blade View)</h3>
 
                             <div className="space-y-4">
-                                <p className="text-slate-600 text-sm">Buat file: <code>resources/views/posts/index.blade.php</code></p>
+                                <p className="text-slate-600 text-sm">Create file: <code>resources/views/posts/index.blade.php</code></p>
                                 <div className="overflow-x-auto">
                                     <SyntaxHighlighter language="html" style={vscDarkPlus} customStyle={{ borderRadius: '0.75rem' }}>
-                                        {`<h1>Blog Sederhana</h1>
+                                        {`<h1>Simple Blog</h1>
 
-<!-- Form Input -->
+<!-- Input Form -->
 <form action="/posts" method="POST">
   @csrf
-  <input type="text" name="title" placeholder="Judul">
-  <textarea name="content" placeholder="Isi"></textarea>
-  <button type="submit">Simpan</button>
+  <input type="text" name="title" placeholder="Title">
+  <textarea name="content" placeholder="Content"></textarea>
+  <button type="submit">Save</button>
 </form>
 
 <hr>
 
-<!-- List Data -->
+<!-- Data List -->
 <ul>
   @foreach($posts as $post)
     <li>
@@ -313,7 +313,7 @@ Route::post('/posts', [PostController::class, 'store']);`}
                                     php artisan make:model Product -mcr
                                 </SyntaxHighlighter>
                             </div>
-                            <p className="text-xs text-slate-500 mt-1">Buat Model + Migration + Controller Resource</p>
+                            <p className="text-xs text-slate-500 mt-1">Create Model + Migration + Controller Resource</p>
                         </div>
                         <div>
                             <h4 className="font-semibold text-slate-700 text-sm mb-2">Database</h4>
@@ -322,7 +322,7 @@ Route::post('/posts', [PostController::class, 'store']);`}
                                     php artisan migrate:fresh --seed
                                 </SyntaxHighlighter>
                             </div>
-                            <p className="text-xs text-slate-500 mt-1">Reset DB & isi data dummy</p>
+                            <p className="text-xs text-slate-500 mt-1">Reset DB & fill with dummy data</p>
                         </div>
                     </div>
                     <div className="space-y-4">
@@ -333,7 +333,7 @@ Route::post('/posts', [PostController::class, 'store']);`}
                                     php artisan route:list
                                 </SyntaxHighlighter>
                             </div>
-                            <p className="text-xs text-slate-500 mt-1">Cek semua URL yang terdaftar</p>
+                            <p className="text-xs text-slate-500 mt-1">Check all registered URLs</p>
                         </div>
                         <div>
                             <h4 className="font-semibold text-slate-700 text-sm mb-2">Cleaning</h4>
@@ -342,7 +342,7 @@ Route::post('/posts', [PostController::class, 'store']);`}
                                     php artisan optimize:clear
                                 </SyntaxHighlighter>
                             </div>
-                            <p className="text-xs text-slate-500 mt-1">Hapus semua cache config/view</p>
+                            <p className="text-xs text-slate-500 mt-1">Clear all config/view caches</p>
                         </div>
                     </div>
                 </div>
@@ -354,11 +354,11 @@ Route::post('/posts', [PostController::class, 'store']);`}
                     <Server className="w-6 h-6" />
                     N+1 Query Problem
                 </h2>
-                <p className="text-slate-600 mb-6">Masalah performa paling umum: Aplikasi melakukan query jauh lebih banyak dari yang dibutuhkan.</p>
+                <p className="text-slate-600 mb-6">The most common performance issue: The application makes far more queries than needed.</p>
 
                 <div className="grid md:grid-cols-2 gap-8">
                     <div>
-                        <h3 className="font-bold text-red-600 mb-3 flex items-center gap-2">⛔ Cara Salah (Lazy Loading)</h3>
+                        <h3 className="font-bold text-red-600 mb-3 flex items-center gap-2">⛔ Wrong Way (Lazy Loading)</h3>
                         <div className="overflow-x-auto">
                             <SyntaxHighlighter language="php" style={vscDarkPlus} customStyle={{ borderRadius: '0.5rem', fontSize: '0.8rem', height: '180px' }}>
                                 {`// Controller
@@ -375,11 +375,11 @@ $books = Book::all();
                         </div>
                     </div>
                     <div>
-                        <h3 className="font-bold text-green-600 mb-3 flex items-center gap-2">✅ Solusi (Eager Loading)</h3>
+                        <h3 className="font-bold text-green-600 mb-3 flex items-center gap-2">✅ Solution (Eager Loading)</h3>
                         <div className="overflow-x-auto">
                             <SyntaxHighlighter language="php" style={vscDarkPlus} customStyle={{ borderRadius: '0.5rem', fontSize: '0.8rem', height: '180px' }}>
                                 {`// Controller
-// Gunakan 'with'
+// Use 'with'
 $books = Book::with('author')->get();
 
 // View
@@ -395,7 +395,7 @@ $books = Book::with('author')->get();
                 </div>
 
                 <div className="mt-6 bg-red-100 p-4 rounded-lg border border-red-200 text-sm text-red-900">
-                    <strong>Pro Tip:</strong> Tambahkan <code>Model::preventLazyLoading(!app()-&gt;isProduction())</code> di <code>AppServiceProvider</code> untuk mencegah ini secara otomatis saat coding.
+                    <strong>Pro Tip:</strong> Add <code>Model::preventLazyLoading(!app()-&gt;isProduction())</code> in <code>AppServiceProvider</code> to prevent this automatically during development.
                 </div>
             </section>
 

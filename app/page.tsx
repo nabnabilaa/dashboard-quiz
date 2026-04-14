@@ -8,16 +8,16 @@ const modules = [
     icon: Package,
     color: "bg-red-50 text-red-500",
     colorRing: "ring-red-100",
-    desc: "Pelajari pengembangan backend dengan Laravel",
+    desc: "Learn backend development with Laravel",
     badge: "Laravel 12",
   },
   {
-    name: "Belajar UI/UX",
-    path: "/belajaruiux",
+    name: "UI/UX Mastery",
+    path: "/ui-ux-mastery",
     icon: Layout,
     color: "bg-blue-50 text-blue-500",
     colorRing: "ring-blue-100",
-    desc: "Kuasai prinsip desain UI/UX modern",
+    desc: "Master modern UI/UX design principles",
     badge: "Design",
   },
   {
@@ -26,25 +26,25 @@ const modules = [
     icon: Shield,
     color: "bg-emerald-50 text-emerald-500",
     colorRing: "ring-emerald-100",
-    desc: "Keamanan siber & ethical hacking",
+    desc: "Cybersecurity & ethical hacking",
     badge: "Security",
   },
   {
-    name: "Frontend",
+    name: "Frontend Development",
     path: "/frontend",
     icon: Code,
     color: "bg-purple-50 text-purple-500",
     colorRing: "ring-purple-100",
-    desc: "HTML, CSS, Bootstrap & pengembangan web modern",
+    desc: "HTML, CSS, Bootstrap & modern web development",
     badge: "Web Dev",
   },
   {
-    name: "Git Master",
+    name: "Git Mastery",
     path: "/git-master",
     icon: GitBranch,
     color: "bg-orange-50 text-orange-500",
     colorRing: "ring-orange-100",
-    desc: "Version control dari dasar sampai mahir",
+    desc: "Version control from basics to advanced",
     badge: "DevOps",
   },
   {
@@ -76,17 +76,17 @@ export default function Home() {
                 <span>Interactive Learning Platform</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
-                Selamat Datang di<br />Maxy Learning! 🚀
+                Welcome to<br />Maxy Learning! 🚀
               </h2>
               <p className="text-white/90 text-lg max-w-lg leading-relaxed">
-                Akses semua modul pembelajaran interaktif dari satu dashboard. Belajar dengan cara yang menyenangkan dan efektif.
+                Access all interactive learning modules from one dashboard. Learn in a fun and effective way.
               </p>
             </div>
             <div className="flex-shrink-0 hidden md:block">
               <div className="w-48 h-48 bg-white/15 backdrop-blur-sm rounded-3xl flex items-center justify-center border border-white/20">
                 <div className="text-center space-y-2">
                   <div className="text-5xl font-extrabold">6</div>
-                  <div className="text-sm font-medium text-white/80">Kursus Tersedia</div>
+                  <div className="text-sm font-medium text-white/80">Courses Available</div>
                 </div>
               </div>
             </div>
@@ -97,8 +97,8 @@ export default function Home() {
         <section className="space-y-6">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-xl font-bold text-slate-800">Kursus Kamu</h3>
-              <p className="text-sm text-slate-400 mt-0.5">Pilih kursus untuk mulai belajar</p>
+              <h3 className="text-xl font-bold text-slate-800">Your Courses</h3>
+              <p className="text-sm text-slate-400 mt-0.5">Select a course to start learning</p>
             </div>
           </div>
 
@@ -127,7 +127,7 @@ export default function Home() {
                 </p>
 
                 <div className="flex items-center gap-1.5 text-sm font-semibold text-[#F5A623] group-hover:gap-3 transition-all">
-                  <span>Mulai Belajar</span>
+                  <span>Start Learning</span>
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                 </div>
               </Link>

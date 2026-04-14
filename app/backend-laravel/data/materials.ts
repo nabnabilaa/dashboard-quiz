@@ -9,214 +9,214 @@ export interface Module {
 export const modules: Module[] = [
     {
         id: "backend-http",
-        title: "Dasar Backend & HTTP",
-        description: "Memahami analogi backend (dapur restoran), siklus Request-Response, dan metode HTTP.",
+        title: "Backend Basics & HTTP",
+        description: "Understanding the backend analogy (restaurant kitchen), the Request-Response cycle, and HTTP methods.",
         content: `
-# Dasar Cara Kerja Backend dan HTTP
+# Fundamentals of Backend and HTTP
 
-## Apa Itu Backend? (Analogi Restoran)
-Backend adalah bagian dari aplikasi yang berjalan di sisi server dan tidak terlihat langsung oleh pengguna.
+## What is Backend? (Restaurant Analogy)
+The backend is the part of an application that runs on the server side and is not directly visible to the user.
 
-### Analogi Restoran:
-- **Frontend (Ruang Makan)**: Ibarat ruang makan yang indah. Pelanggan melihat buku menu, memesan makanan, dan menikmati suasana. Ini adalah area interaksi pelanggan (Browser/Client).
-- **Backend (Dapur)**: Ibarat dapur yang sibuk di belakang layar. Pelanggan tidak melihat apa yang terjadi di sini. Koki (Server/Script) menerima pesanan, mengambil bahan baku dari kulkas (Database), memasaknya sesuai resep (Logika Bisnis), dan menyajikannya kembali ke pelayan.
+### Restaurant Analogy:
+- **Frontend (Dining Room)**: Like a beautiful dining area. Customers see the menu, order food, and enjoy the atmosphere. This is the customer interaction area (Browser/Client).
+- **Backend (Kitchen)**: Like the busy kitchen behind the scenes. Customers don't see what happens here. The chef (Server/Script) receives orders, takes ingredients from the fridge (Database), cooks them according to a recipe (Business Logic), and serves them back to the waiter.
 
-### Ringkasnya:
-- **Frontend**: Fokus pada tampilan & interaksi di browser (HTML, CSS, JS).
-- **Backend**: Fokus pada penyimpanan, pengolahan, dan integritas data (PHP/Laravel, Database).
+### In Short:
+- **Frontend**: Focuses on display & interaction in the browser (HTML, CSS, JS).
+- **Backend**: Focuses on storage, processing, and data integrity (PHP/Laravel, Database).
 
-## Mekanisme Request-Response
-Komunikasi web terjadi melalui protokol HTTP dengan model:
-1. **Request (Permintaan)**: Client mengirim permintaan (misal: "Buka halaman produk ID 5").
-2. **Processing (Pemrosesan)**: Server menerima, mencari data di database, dan meracik respon.
-3. **Response (Jawaban)**: Server mengirim balik data (HTML atau JSON) beserta Status Code.
+## Request-Response Mechanism
+Web communication happens via the HTTP protocol with the following model:
+1. **Request**: The client sends a request (e.g., "Open product page ID 5").
+2. **Processing**: The server receives it, looks for data in the database, and prepares a response.
+3. **Response**: The server sends back data (HTML or JSON) along with a Status Code.
 
-## Metode HTTP (HTTP Verbs)
-Setiap request memiliki "kata kerja" yang menentukan tindakan:
-- **GET**: Mengambil data (misal: lihat halaman produk). Tidak mengubah data server.
-- **POST**: Mengirim data baru (misal: submit form registrasi).
-- **PUT / PATCH**: Memperbarui data yang sudah ada.
-- **DELETE**: Menghapus data.
+## HTTP Methods (HTTP Verbs)
+Each request has a "verb" that determines the action:
+- **GET**: Retrieves data (e.g., viewing a product page). Does not change server data.
+- **POST**: Sends new data (e.g., submitting a registration form).
+- **PUT / PATCH**: Updates existing data.
+- **DELETE**: Deletes data.
 
-> **Penting**: HTTP bersifat *Stateless*, artinya server tidak "mengingat" request sebelumnya secara otomatis.
+> **Important**: HTTP is *Stateless*, meaning the server does not "remember" previous requests automatically.
         `
     },
     {
         id: "intro-mvc",
-        title: "Pengenalan Laravel & MVC",
-        description: "Instalasi, struktur folder, dan konsep Model-View-Controller.",
+        title: "Introduction to Laravel & MVC",
+        description: "Installation, folder structure, and the Model-View-Controller concept.",
         content: `
-# Pengenalan Laravel & MVC
+# Introduction to Laravel & MVC
 
-## Apa Itu Laravel?
-Laravel adalah kerangka kerja (framework) PHP modern yang ekspresif dan elegan. Ia menyediakan alat lengkap ("Batteries Included") seperti Eloquent ORM, Routing, dan Security out-of-the-box.
+## What is Laravel?
+Laravel is a modern, expressive, and elegant PHP framework. It provides a complete toolset ("Batteries Included") such as Eloquent ORM, Routing, and Security out-of-the-box.
 
-## Instalasi Laravel 12
-Pastikan PHP dan Composer sudah terinstal.
+## Installing Laravel 12
+Ensure PHP and Composer are installed.
 \`\`\`bash
-composer create-project laravel/laravel:^12.0 nama-proyek
-cd nama-proyek
+composer create-project laravel/laravel:^12.0 project-name
+cd project-name
 php artisan serve
 \`\`\`
-Akses di \`http://127.0.0.1:8000\`.
+Access at \`http://127.0.0.1:8000\`.
 
-## Konsep MVC (Model-View-Controller)
-Laravel memisahkan kode menjadi tiga bagian utama:
-1.  **Model (M) - "Si Pengelola Data"**: Berinteraksi dengan database.
-    *   Lokasi: \`app/Models/\`
-2.  **View (V) - "Si Tampilan"**: Menyajikan data ke user (HTML).
-    *   Lokasi: \`resources/views/\`
-3.  **Controller (C) - "Si Pengatur"**: Menerima request, menyuruh Model mengambil data, lalu melemparnya ke View.
-    *   Lokasi: \`app/Http/Controllers/\`
+## MVC Concept (Model-View-Controller)
+Laravel separates code into three main parts:
+1.  **Model (M) - "The Data Manager"**: Interacts with the database.
+    *   Location: \`app/Models/\`
+2.  **View (V) - "The Display"**: Presents data to the user (HTML).
+    *   Location: \`resources/views/\`
+3.  **Controller (C) - "The Orchestrator"**: Receives requests, tells the Model to get data, then passes it to the View.
+    *   Location: \`app/Http/Controllers/\`
 
-## Struktur Folder Penting
-- **\`routes/\`**: Jalur URL aplikasi (web.php untuk HTML, api.php untuk JSON).
-- **\`app/\`**: Inti logika aplikasi (Models, Controllers).
-- **\`resources/\`**: Aset mentah (Views, CSS/JS sumber).
-- **\`database/\`**: Migrasi dan Seeds.
-- **\`.env\`**: Konfigurasi sensitif (Password DB, API Keys). **Jangan pernah commit file ini!**
+## Important Folder Structure
+- **\`routes/\`**: Application URL paths (web.php for HTML, api.php for JSON).
+- **\`app/\`**: Core application logic (Models, Controllers).
+- **\`resources/\`**: Raw assets (Views, source CSS/JS).
+- **\`database/\`**: Migrations and Seeds.
+- **\`.env\`**: Sensitive configurations (DB Password, API Keys). **Never commit this file!**
         `
     },
     {
         id: "routing-controller",
-        title: "Routing & Controller",
-        description: "Mengatur alur logika URL ke Controller.",
+        title: "Routing & Controllers",
+        description: "Managing the flow of logic from URLs to Controllers.",
         content: `
-# Routing & Controller: Mengatur Alur Logika
+# Routing & Controllers: Managing Logic Flow
 
-Jika aplikasi adalah gedung kantor, **Routing** adalah resepsionis yang mengarahkan tamu, dan **Controller** adalah staf yang melayani tamu tersebut.
+If an application is an office building, **Routing** is the receptionist who directs guests, and the **Controller** is the staff member who serves those guests.
 
-## Routing Dasar (\`routes/web.php\`)
+## Basic Routing (\`routes/web.php\`)
 \`\`\`php
 use Illuminate\\Support\\Facades\\Route;
 
-// Route sederhana
-Route::get('/halo', function () {
-    return 'Halo Dunia!';
+// Simple Route
+Route::get('/hello', function () {
+    return 'Hello World!';
 });
 
-// Route dengan Parameter
-Route::get('/produk/{id}', function ($id) {
-    return "Produk ID: " . $id;
+// Route with Parameter
+Route::get('/product/{id}', function ($id) {
+    return "Product ID: " . $id;
 });
 \`\`\`
 
 ## Controller
-Daripada menulis logika di file route (yang akan jadi berantakan), pindahkan ke Controller.
+Instead of writing logic in the route file (which will get messy), move it to a Controller.
 
-Buat Controller:
+Create a Controller:
 \`\`\`bash
 php artisan make:controller ProductController
 \`\`\`
 
-Isi Controller (\`app/Http/Controllers/ProductController.php\`):
+Controller Content (\`app/Http/Controllers/ProductController.php\`):
 \`\`\`php
 public function show($id) {
-    return "Ini logika Controller untuk ID: " . $id;
+    return "This is Controller logic for ID: " . $id;
 }
 \`\`\`
 
-Hubungkan di Route:
+Connect in the Route:
 \`\`\`php
 use App\\Http\\Controllers\\ProductController;
-Route::get('/produk/{id}', [ProductController::class, 'show']);
+Route::get('/product/{id}', [ProductController::class, 'show']);
 \`\`\`
 
 ## Resource Controller
-Cara cepat membuat 7 route standar CRUD (Create, Read, Update, Delete):
+A fast way to create 7 standard CRUD routes (Create, Read, Update, Delete):
 \`\`\`bash
 php artisan make:controller ProductController --resource
 \`\`\`
-Di route cukup satu baris:
+One line in the route is enough:
 \`\`\`php
 Route::resource('products', ProductController::class);
 \`\`\`
-Ini otomatis membuat route untuk index, create, store, show, edit, update, dan destroy.
+This automatically creates routes for index, create, store, show, edit, update, and destroy.
         `
     },
     {
         id: "view-blade",
-        title: "View & Blade Templating",
-        description: "Menampilkan data dinamis dengan mesin template Blade.",
+        title: "Views & Blade Templating",
+        description: "Displaying dynamic data using the Blade template engine.",
         content: `
-# View & Blade Templating
+# Views & Blade Templating
 
-Blade adalah mesin template powerful Laravel. File berekstensi \`.blade.php\` di folder \`resources/views/\`.
+Blade is Laravel's powerful template engine. Files have the \`.blade.php\` extension and are located in the \`resources/views/\` folder.
 
-## Sintaks Dasar
-- **Echo Data**: \`{{ $variabel }}\` (Aman, otomatis escaping XSS).
-- **HTML Mentah**: \`{!! $html !!}\` (Hati-hati gunakan ini).
+## Basic Syntax
+- **Echo Data**: \`{{ $variable }}\` (Safe, automatic XSS escaping).
+- **Raw HTML**: \`{!! $html !!}\` (Use this carefully).
 
-## Struktur Kendali
+## Control Structures
 \`\`\`blade
-<!-- Pengkondisian -->
-@if ($stok > 0)
-    <span>Tersedia</span>
+<!-- Conditional -->
+@if ($stock > 0)
+    <span>Available</span>
 @else
-    <span>Habis</span>
+    <span>Out of Stock</span>
 @endif
 
-<!-- Perulangan -->
-@foreach ($produk as $item)
-    <li>{{ $item->nama }}</li>
+<!-- Loop -->
+@foreach ($products as $item)
+    <li>{{ $item->name }}</li>
 @endforeach
 \`\`\`
 
-## Template Inheritance (Pewarisan Layout)
-Membuat satu layout induk agar tidak mengulang kode Header/Footer.
+## Template Inheritance (Layout Inheritance)
+Creating one base layout to avoid repeating Header/Footer code.
 
-**Induk (\`layouts/app.blade.php\`):**
+**Parent (\`layouts/app.blade.php\`):**
 \`\`\`blade
 <html>
 <body>
     <nav>Menu...</nav>
-    <div class="konten">
+    <div class="content">
         @yield('content')
     </div>
 </body>
 </html>
 \`\`\`
 
-**Anak (\`home.blade.php\`):**
+**Child (\`home.blade.php\`):**
 \`\`\`blade
 @extends('layouts.app')
 
 @section('content')
-    <h1>Halaman Home</h1>
+    <h1>Home Page</h1>
 @endsection
 \`\`\`
 
-## Fitur Penting Lain
-- **@csrf**: Wajib ada di dalam setiap form \`<form method="POST">\` untuk keamanan.
-- **@method('PUT')**: Untuk manipulasi method form HTML agar bisa mengirim request PUT/DELETE.
+## Other Important Features
+- **@csrf**: Required inside every \`<form method="POST">\` for security.
+- **@method('PUT')**: For HTML form method manipulation to send PUT/DELETE requests.
         `
     },
     {
         id: "database-migration",
-        title: "Database & Migrasi",
-        description: "Mengelola struktur database layaknya version control.",
+        title: "Databases & Migrations",
+        description: "Managing database structures like version control.",
         content: `
-# Database & Migrasi
+# Databases & Migrations
 
-## Konfigurasi
-Atur koneksi database di file \`.env\`:
+## Configuration
+Set up the database connection in the \`.env\` file:
 \`\`\`env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
-DB_DATABASE=nama_database
+DB_DATABASE=database_name
 DB_USERNAME=root
 DB_PASSWORD=
 \`\`\`
 
-## Apa Itu Migrasi?
-Migrasi adalah *Version Control* untuk database. Tim tidak perlu kirim-kiriman file SQL manual. Cukup jalankan kode migrasi.
+## What is Migration?
+Migration is *Version Control* for the database. Teams don't need to manually send SQL files. Just run the migration code.
 
-## Membuat & Menjalankan Migrasi
-1.  **Buat File Migrasi**:
+## Creating & Running Migrations
+1.  **Create Migration File**:
     \`\`\`bash
     php artisan make:migration create_products_table
     \`\`\`
-2.  **Edit File (di \`database/migrations/\`)**:
+2.  **Edit File (in \`database/migrations/\`)**:
     \`\`\`php
     public function up()
     {
@@ -229,95 +229,95 @@ Migrasi adalah *Version Control* untuk database. Tim tidak perlu kirim-kiriman f
         });
     }
     \`\`\`
-3.  **Eksekusi ke Database**:
+3.  **Execute to Database**:
     \`\`\`bash
     php artisan migrate
     \`\`\`
 
-## Mengelola Migrasi
-- \`php artisan migrate:rollback\`: Membatalkan migrasi terakhir.
-- \`php artisan migrate:fresh\`: **Hapus semua tabel** dan migrasi ulang dari nol (Hati-hati data hilang!).
+## Managing Migrations
+- \`php artisan migrate:rollback\`: Reverts the last migration.
+- \`php artisan migrate:fresh\`: **Deletes all tables** and re-migrates from scratch (Careful, data loss!).
         `
     },
     {
         id: "eloquent-orm",
         title: "Eloquent ORM",
-        description: "Berinteraksi dengan database menggunakan Model PHP, bukan SQL.",
+        description: "Interacting with the database using PHP Models, not SQL.",
         content: `
 # Eloquent ORM
 
-Eloquent adalah "Penerjemah". Anda bicara PHP, Eloquent menerjemahkan ke SQL.
-Setiap tabel punya satu **Model**.
-- Tabel: \`products\` (Jamak)
-- Model: \`Product\` (Tunggal)
+Eloquent is a "Translator". You speak PHP, Eloquent translates to SQL.
+Each table has one **Model**.
+- Table: \`products\` (Plural)
+- Model: \`Product\` (Singular)
 
-## Membuat Model
+## Creating a Model
 \`\`\`bash
 php artisan make:model Product
 \`\`\`
 
 ## Mass Assignment ($fillable)
-Fitur keamanan wajib. Tentukan kolom mana yang boleh diisi user di file Model \`app/Models/Product.php\`:
+A mandatory security feature. Define which columns can be filled by the user in the \`app/Models/Product.php\` model file:
 \`\`\`php
 protected $fillable = ['name', 'description', 'price'];
 \`\`\`
 
-## Operasi CRUD dengan Eloquent
-### 1. READ (Ambil Data)
+## CRUD Operations with Eloquent
+### 1. READ (Get Data)
 \`\`\`php
 $all = Product::all();
-$satu = Product::find(1); // Cari ID 1
-$murah = Product::where('price', '<', 50000)->get();
+$one = Product::find(1); // Find ID 1
+$cheap = Product::where('price', '<', 50000)->get();
 \`\`\`
 
-### 2. CREATE (Tambah Data)
+### 2. CREATE (Add Data)
 \`\`\`php
 Product::create([
-    'name' => 'Sepatu',
+    'name' => 'Shoes',
     'price' => 150000
 ]);
 \`\`\`
 
-### 3. UPDATE (Ubah Data)
+### 3. UPDATE (Change Data)
 \`\`\`php
 $product = Product::find(1);
 $product->update(['price' => 120000]);
 \`\`\`
 
-### 4. DELETE (Hapus Data)
+### 4. DELETE (Remove Data)
 \`\`\`php
 $product = Product::find(1);
 $product->delete();
-// Atau
+// Or
 Product::destroy(1);
 \`\`\`
         `
     },
     {
         id: "crud-web",
-        title: "Studi Kasus: CRUD Website",
-        description: "Membangun aplikasi Katalog Produk lengkap dengan tampilan Web.",
+        title: "Case Study: CRUD Website",
+        description: "Building a complete Product Catalog application with a Web view.",
         content: `
-# Studi Kasus: CRUD Website (Katalog Produk)
+# Case Study: CRUD Website (Product Catalog)
 
-Kita akan menggabungkan Route, Controller, Model, dan View.
+We will combine Routes, Controllers, Models, and Views.
 
 ## 1. Routing
-Di \`routes/web.php\`:
+In \`routes/web.php\`:
 \`\`\`php
 Route::resource('products', ProductController::class);
 \`\`\`
 
 ## 2. Controller (\`ProductController\`)
-- **index()**: Ambil data \`Product::all()\`, return view \`index\`.
-- **create()**: Return view form tambah.
-- **store(Request $request)**: Validasi input, lalu \`Product::create($validated)\`, redirect ke index.
-- **edit($id)**: Ambil data, return view form edit.
-- **update(Request $request, $id)**: Validasi, update data, redirect.
-- **destroy($id)**: Hapus data, redirect.
+- **index()**: Get \`Product::all()\` data, return the \`index\` view.
+- **create()**: Return the add form view.
+- **store(Request $request)**: Validate input, then \`Product::create($validated)\`, redirect to index.
+- **edit($id)**: Get data, return the edit form view.
+- **update(Request $request, $id)**: Validate, update data, redirect.
+- **destroy($id)**: Delete data, redirect.
 
-## 3. View Index (\`index.blade.php\`)
-Looping data dengan table:
+## 3. Index View (\`index.blade.php\`)
+Loop through data with a table:
 \`\`\`blade
 @foreach($products as $p)
     <tr>
@@ -327,34 +327,34 @@ Looping data dengan table:
             <form action="{{ route('products.destroy', $p->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button type="submit">Hapus</button>
+                <button type="submit">Delete</button>
             </form>
         </td>
     </tr>
 @endforeach
 \`\`\`
-*Catatan: Tombol Hapus harus dibungkus form dengan method DELETE.*
+*Note: The Delete button must be wrapped in a form with the DELETE method.*
         `
     },
     {
         id: "rest-api",
         title: "REST API Development",
-        description: "Membuat Endpoint CRUD yang menghasilkan JSON untuk aplikasi mobile/frontend lain.",
+        description: "Creating CRUD Endpoints that produce JSON for mobile or other frontend applications.",
         content: `
-# Pembuatan REST API
+# REST API Development
 
-Berbeda dengan Web yang me-return HTML, API me-return JSON. Gunakan route di \`routes/api.php\`.
+Unlike Web which returns HTML, an API returns JSON. Use routes in \`routes/api.php\`.
 
-## Routing API
+## API Routing
 \`\`\`php
 // routes/api.php
 Route::apiResource('products', ProductApiController::class);
 \`\`\`
-Route ini otomatis memiliki prefix \`/api\`, jadi URL-nya: \`http://host/api/products\`.
+This route automatically has the \`/api\` prefix, so the URL is: \`http://host/api/products\`.
 
-## Controller API
-Buat controller terpisah, misal \`Api/ProductApiController\`.
-Respon harus JSON:
+## API Controller
+Create a separate controller, e.g., \`Api/ProductApiController\`.
+Responses must be JSON:
 
 **GET (Index)**
 \`\`\`php
@@ -379,24 +379,24 @@ public function destroy($id) {
 }
 \`\`\`
 
-## HTTP Status Codes Penting
-- **200 OK**: Sukses.
-- **201 Created**: Berhasil membuat data baru.
-- **404 Not Found**: Data tidak ditemukan.
-- **422 Unprocessable Entity**: Validasi gagal.
-- **500 Internal Server Error**: Error di kode server.
+## Important HTTP Status Codes
+- **200 OK**: Success.
+- **201 Created**: Successfully created new data.
+- **404 Not Found**: Data not found.
+- **422 Unprocessable Entity**: Validation failed.
+- **500 Internal Server Error**: Error in server code.
         `
     },
     {
         id: "validation",
-        title: "Validasi Input",
-        description: "Menjaga integritas data dengan memvalidasi input user sebelum disimpan.",
+        title: "Input Validation",
+        description: "Maintaining data integrity by validating user input before saving.",
         content: `
-# Validasi Form dan Input
+# Form and Input Validation
 
-Jangan pernah percaya input user! Selalu validasi di Controller.
+Never trust user input! Always validate in the Controller.
 
-## Cara Validasi Dasar
+## Basic Validation Method
 \`\`\`php
 public function store(Request $request) {
     $validated = $request->validate([
@@ -405,59 +405,59 @@ public function store(Request $request) {
         'age' => 'nullable|integer|min:17',
     ]);
 
-    // Jika lolos, kode lanjut. Jika gagal, otomatis redirect back + error.
+    // If it passes, the code continues. If it fails, it automatically redirects back + errors.
     User::create($validated);
 }
 \`\`\`
 
-## Menampilkan Error di Blade
+## Displaying Errors in Blade
 \`\`\`blade
 <input type="text" name="name" value="{{ old('name') }}">
 @error('name')
     <div class="error">{{ $message }}</div>
 @enderror
 \`\`\`
-Fitur **\`old('name')\`** berguna agar isian user tidak hilang saat validasi gagal.
+The **\`old('name')\`** feature is useful so that the user's input isn't lost when validation fails.
 
-## Respon Error API
-Jika request datang dari API (Header \`Accept: application/json\`), Laravel otomatis me-return JSON error 422, bukan redirect.
+## API Error Response
+If the request comes from an API (Header \`Accept: application/json\`), Laravel automatically returns a 422 JSON error instead of a redirect.
         `
     },
     {
         id: "auth-security",
-        title: "Autentikasi & Keamanan",
-        description: "Sistem Login, Register, dan Middleware menggunakan Laravel Breeze.",
+        title: "Authentication & Security",
+        description: "Login system, Registration, and Middleware using Laravel Breeze.",
         content: `
-# Autentikasi Dasar & Keamanan
+# Basic Authentication & Security
 
 ## Laravel Breeze
-Paket starter kit untuk autentikasi lengkap (Login, Register, Reset Password).
+A starter kit package for complete authentication (Login, Register, Password Reset).
 \`\`\`bash
 composer require laravel/breeze --dev
 php artisan breeze:install
 php artisan migrate
 \`\`\`
 
-## Middleware (Satpam Route)
-Untuk membatasi halaman hanya bagi user yang login, gunakan middleware \`auth\`.
+## Middleware (Route Guard)
+To restrict pages to logged-in users only, use the \`auth\` middleware.
 \`\`\`php
 Route::middleware('auth')->group(function () {
     Route::resource('products', ProductController::class);
 });
 \`\`\`
-Jika user belum login mengakses URL ini, akan dilempar ke halaman Login.
+If a user hasn't logged in and accesses this URL, they will be redirected to the Login page.
 
-## Mengakses User Login
-Di Controller atau View:
+## Accessing Logged-in User
+In the Controller or View:
 \`\`\`php
-$user = Auth::user(); // Ambil objek user
-$id = Auth::id();     // Ambil ID user
+$user = Auth::user(); // Get user object
+$id = Auth::id();     // Get user ID
 \`\`\`
 
-Di Blade:
+In Blade:
 \`\`\`blade
 @auth
-    Halo, {{ Auth::user()->name }}
+    Hello, {{ Auth::user()->name }}
     <form action="{{ route('logout') }}" method="POST">@csrf <button>Logout</button></form>
 @endauth
 \`\`\`
@@ -465,35 +465,35 @@ Di Blade:
     },
     {
         id: "postman",
-        title: "Testing dengan Postman",
-        description: "Cara menguji endpoint API menggunakan aplikasi Postman.",
+        title: "Testing with Postman",
+        description: "How to test API endpoints using the Postman application.",
         content: `
-# Menggunakan Postman untuk Testing API
+# Using Postman for API Testing
 
-Browser biasa sulit untuk mengetes POST, PUT, DELETE. Gunakan Postman.
+Regular browsers are difficult for testing POST, PUT, and DELETE. Use Postman instead.
 
-## Persiapan
-1. Jalankan server: \`php artisan serve\`.
+## Preparation
+1. Run the server: \`php artisan serve\`.
 2. Base URL: \`http://127.0.0.1:8000/api/products\`.
-3. Di Tab **Headers**, tambahkan:
+3. In the **Headers** tab, add:
    - Key: \`Accept\`
    - Value: \`application/json\`
-   *(Ini agar Laravel tahu kita minta JSON, bukan HTML)*.
+   *(This lets Laravel know we want JSON, not HTML)*.
 
-## Skenario Tes
-1. **GET**: Masukkan URL, klik Send. Cek Status \`200 OK\` dan hasil JSON array.
+## Test Scenarios
+1. **GET**: Enter the URL, click Send. Check for Status \`200 OK\` and JSON array results.
 2. **POST**:
-   - Ganti method ke POST.
-   - Ke tab **Body** -> **raw** -> **JSON**.
-   - Isi: \`{ "name": "Kopi", "price": 5000 }\`
-   - Send. Cek Status \`201 Created\`.
-3. **Validasi Gagal**:
-   - Coba POST dengan body kosong.
-   - Cek Status \`422 Unprocessable Entity\` dan pesan error JSON.
-4. **PUT/PATCH** (Edit): URL \`/api/products/1\`, method PUT, isi Body JSON baru.
+   - Change method to POST.
+   - Go to the **Body** tab -> **raw** -> **JSON**.
+   - Content: \`{ "name": "Coffee", "price": 5000 }\`
+   - Send. Check for Status \`201 Created\`.
+3. **Validation Failure**:
+   - Try a POST with an empty body.
+   - Check for Status \`422 Unprocessable Entity\` and JSON error messages.
+4. **PUT/PATCH** (Edit): URL \`/api/products/1\`, method PUT, new JSON body content.
 5. **DELETE**: URL \`/api/products/1\`, method DELETE.
 
-**Tips**: Selalu cek HTTP Status Code di pojok kanan atas response Postman.
+**Tip**: Always check the HTTP Status Code in the top right corner of the Postman response.
         `
     }
 ];

@@ -11,8 +11,8 @@ export default function LearnPage() {
                     Complete Laravel <span className="text-purple-600">Backend Guide</span>
                 </h1>
                 <p className="mt-4 text-slate-600 text-lg leading-relaxed">
-                    Kuasai pengembangan Modern Web & API dengan kurikulum komprehensif kami.
-                    Pelajari best practices dari dasar hingga mahir.
+                    Master modern Web & API development with our comprehensive curriculum.
+                    Learn best practices from basics to advanced.
                 </p>
             </div>
 
@@ -40,7 +40,7 @@ export default function LearnPage() {
                         </p>
 
                         <div className="flex items-center text-sm font-bold text-slate-900 group-hover:text-purple-700 transition-colors border-t border-slate-100 pt-4">
-                            Mulai Belajar
+                            Start Learning
                             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform text-purple-500" />
                         </div>
                     </Link>

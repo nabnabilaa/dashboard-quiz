@@ -23,11 +23,11 @@ export default function Navbar() {
                     </div>
 
                     <div className="hidden md:flex gap-8 text-sm font-medium text-slate-400">
-                        {["Beranda", "Tentang", "Kurikulum"].map((item) => {
+                        {["Home", "About", "Curriculum"].map((item) => {
                             let href = "#";
-                            if (item === "Beranda") href = "#hero";
-                            if (item === "Tentang") href = "#about";
-                            if (item === "Kurikulum") href = "#curriculum";
+                            if (item === "Home") href = "#hero";
+                            if (item === "About") href = "#about";
+                            if (item === "Curriculum") href = "#curriculum";
 
                             return (
                                 <a
@@ -44,7 +44,7 @@ export default function Navbar() {
 
                     <div className="hidden md:block">
                         <button className="px-6 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold text-sm transition shadow-lg shadow-sky-500/20 active:scale-95">
-                            Akses Materi
+                            Access Materials
                         </button>
                     </div>
                 </div>

@@ -44,7 +44,7 @@ export const FondasiSection = () => {
                     disabled={idx === 0}
                     onClick={() => setIdx((i) => i - 1)}
                 >
-                    <ChevronLeft size={18} /> <span className="hidden sm:inline">Sebelumnya</span>
+                    <ChevronLeft size={18} /> <span className="hidden sm:inline">Previous</span>
                 </button>
                 <div className="flex gap-1">
                     {modules.map((_, i) => (
@@ -62,7 +62,7 @@ export const FondasiSection = () => {
                     disabled={idx === modules.length - 1}
                     onClick={() => setIdx((i) => i + 1)}
                 >
-                    <span className="hidden sm:inline">Selanjutnya</span> <ArrowRight size={18} />
+                    <span className="hidden sm:inline">Next</span> <ArrowRight size={18} />
                 </button>
             </div>
         </div>

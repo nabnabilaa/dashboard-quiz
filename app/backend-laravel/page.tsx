@@ -8,18 +8,18 @@ export default function Home() {
       icon: BookOpen,
       iconBg: "bg-blue-50 text-blue-500",
       ring: "ring-blue-100",
-      title: "Pembelajaran Terstruktur",
-      desc: "Pelajari mendalam tentang MVC, Eloquent, dan API Resource dengan modul terpandu.",
-      cta: "Mulai Belajar",
+      title: "Structured Learning",
+      desc: "Deep dive into MVC, Eloquent, and API Resources with guided modules.",
+      cta: "Start Learning",
     },
     {
       href: "/backend-laravel/quiz",
       icon: MonitorPlay,
       iconBg: "bg-purple-50 text-purple-500",
       ring: "ring-purple-100",
-      title: "Uji Pengetahuan",
-      desc: "Tantang diri Anda dengan 20 pertanyaan terkurasi untuk memverifikasi pemahaman Anda.",
-      cta: "Mulai Kuis",
+      title: "Test Your Knowledge",
+      desc: "Challenge yourself with 20 curated questions to verify your understanding.",
+      cta: "Start Quiz",
     },
     {
       href: "/backend-laravel/builder",
@@ -27,8 +27,8 @@ export default function Home() {
       iconBg: "bg-emerald-50 text-emerald-500",
       ring: "ring-emerald-100",
       title: "Backend Builder",
-      desc: "Selesaikan tugas backend dunia nyata dalam lingkungan simulasi.",
-      cta: "Mulai Coding",
+      desc: "Complete real-world backend tasks in a simulated environment.",
+      cta: "Start Coding",
     },
     {
       href: "/backend-laravel/demo",
@@ -36,8 +36,8 @@ export default function Home() {
       iconBg: "bg-amber-50 text-amber-500",
       ring: "ring-amber-100",
       title: "Live Demo",
-      desc: "Panduan hands-on membuat project Laravel dari nol sampai jadi.",
-      cta: "Mulai Demo",
+      desc: "Hands-on guide to creating a Laravel project from scratch.",
+      cta: "Start Demo",
     },
   ];
 
@@ -53,15 +53,15 @@ export default function Home() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
           </span>
-          Baru: Diperbarui untuk Laravel 12
+          New: Updated for Laravel 12
         </div>
 
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-800 pb-2">
-          Kuasai Backend <span className="gradient-text">Laravel.</span>
+          Master Backend <span className="gradient-text">Laravel.</span>
         </h1>
         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-          Platform interaktif untuk belajar Pengembangan Web & API.
-          Gabungkan teori dengan praktik menggunakan builder terintegrasi.
+          Interactive platform for learning Web & API Development.
+          Combine theory with practice using an integrated builder.
         </p>
 
         <div className="grid md:grid-cols-2 gap-5 pt-10 text-left">

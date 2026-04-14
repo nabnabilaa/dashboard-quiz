@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 
 export default function Typewriter() {
-    const words = ["Digital.", "Jaringan.", "Privasi.", "Server."];
+    const words = ["Digital.", "Network.", "Privacy.", "Server."];
     const [text, setText] = useState("");
     const [wordIndex, setWordIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
