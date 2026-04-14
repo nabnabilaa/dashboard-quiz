@@ -141,7 +141,8 @@ const modulesDB: Record<string, any> = {
                 { title: "Google Dorking", desc: "Try searching for PDF files on your university website using 'site:ac.id filetype:pdf'." },
                 { title: "Whois Lookup", desc: "Check who owns the domain facebook.com using an online whois tool." }
             ]
-        },
+        }
+    },
     4: {
         id: 4,
         title: "Scanning & Enumeration",
