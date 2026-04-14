@@ -455,7 +455,6 @@ const modulesDB: Record<string, any> = {
         }
     }
 };
-};
 
 export default function ModulePage({ params }: { params: Promise<{ id: string }> }) {
     const resolvedParams = use(params);
