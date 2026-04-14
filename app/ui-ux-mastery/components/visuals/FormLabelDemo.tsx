@@ -6,14 +6,14 @@ export const FormLabelDemo = () => (
             <label className="mb-1 block text-xs font-bold text-slate-600">Top Aligned Label</label>
             <input
                 type="text"
-                placeholder="Isi data..."
+                placeholder="Enter data..."
                 className="w-full rounded-md border border-slate-300 p-2.5"
             />
         </div>
         <div>
             <input
                 type="text"
-                placeholder="Placeholder Label (Hilang saat diketik)"
+                placeholder="Placeholder Label (Disappears when typed)"
                 className="w-full rounded-md border border-slate-300 p-2.5"
             />
         </div>

@@ -45,24 +45,24 @@ export type ViewType = 'usecase' | 'activity';
 export const visualScenarios = {
     usecase: [
         {
-            title: "Login System", text: "User memasukkan data, dan Sistem memvalidasinya.", seq: ['actor', 'assoc', 'usecase', 'assoc', 'actor_sys'], exp: "User (Actor) terhubung ke Use Case, dan Use Case butuh validasi dari Sistem (Actor lain)."
+            title: "Login System", text: "User enters data, and the System validates it.", seq: ['actor', 'assoc', 'usecase', 'assoc', 'actor_sys'], exp: "User (Actor) is connected to a Use Case, and the Use Case needs validation from the System (another Actor)."
         },
         {
-            title: "Fitur Wajib (Include)", text: "Saat Transfer Uang, sistem WAJIB Cek Saldo.", seq: ['usecase', 'include', 'usecase'], exp: "Transfer 'Include' Cek Saldo. Artinya Cek Saldo selalu dijalankan."
+            title: "Mandatory Feature (Include)", text: "When Transferring Money, the system MUST Check Balance.", seq: ['usecase', 'include', 'usecase'], exp: "Transfer 'Includes' Check Balance. This means Check Balance is always executed."
         },
         {
-            title: "Sistem ATM", text: "Nasabah menarik tunai dari Mesin ATM (Hardware).", seq: ['actor', 'assoc', 'usecase', 'assoc', 'actor_sys'], exp: "Nasabah -> Tarik Tunai -> Sistem Bank."
+            title: "ATM System", text: "A customer withdraws cash from an ATM Machine (Hardware).", seq: ['actor', 'assoc', 'usecase', 'assoc', 'actor_sys'], exp: "Customer -> Withdraw Cash -> Bank System."
         }
     ],
     activity: [
         {
-            title: "Login Flow", text: "Mulai -> Input Data -> Validasi -> Selesai.", seq: ['start', 'flow', 'action', 'flow', 'action', 'flow', 'end'], exp: "Alur linear sederhana: Start -> Input -> Validasi -> End."
+            title: "Login Flow", text: "Start -> Input Data -> Validation -> Finish.", seq: ['start', 'flow', 'action', 'flow', 'action', 'flow', 'end'], exp: "Simple linear flow: Start -> Input -> Validation -> End."
         },
         {
-            title: "Cek Stok (Decision)", text: "Cek Barang -> Jika Ada (Kirim), Jika Kosong (Pesan).", seq: ['action', 'flow', 'decision'], exp: "Setelah aksi Cek Barang, masuk ke Decision untuk bercabang."
+            title: "Check Stock (Decision)", text: "Check Item -> If Available (Ship), If Empty (Order).", seq: ['action', 'flow', 'decision'], exp: "After the Check Item action, enter a Decision to branch."
         },
         {
-            title: "Paralel (Fork)", text: "Mulai -> Split menjadi 2 proses (Kirim Email & SMS).", seq: ['start', 'flow', 'fork'], exp: "Fork Node memecah satu aliran menjadi banyak aliran paralel."
+            title: "Parallel (Fork)", text: "Start -> Split into 2 processes (Send Email & SMS).", seq: ['start', 'flow', 'fork'], exp: "Fork Node splits one stream into multiple parallel streams."
         }
     ]
 };
@@ -70,8 +70,8 @@ export const visualScenarios = {
 export const builderTemplates: Record<string, Template> = {
     gofood: {
         title: 'Go-Food',
-        actors: ['Pelanggan', 'Driver', 'Restoran'],
-        usecases: ['Pilih Menu', 'Pesan', 'Bayar', 'Antar', 'Selesai'],
+        actors: ['Customer', 'Driver', 'Restaurant'],
+        usecases: ['Choose Menu', 'Order', 'Pay', 'Delivery', 'Finish'],
         mappings: {
             '0': [0, 1, 2], '1': [3, 4], '2': [2, 3]
         },
@@ -81,8 +81,8 @@ export const builderTemplates: Record<string, Template> = {
     },
     atm: {
         title: 'ATM System',
-        actors: ['Nasabah', 'Sistem Bank'],
-        usecases: ['Masukkan Kartu', 'Verifikasi PIN', 'Cek Saldo', 'Tarik Tunai', 'Struk Print'],
+        actors: ['Customer', 'Bank System'],
+        usecases: ['Insert Card', 'Verify PIN', 'Check Balance', 'Withdraw Cash', 'Print Receipt'],
         mappings: {
             '0': [0, 1, 2, 3], '1': [1, 2, 3]
         },

@@ -11,7 +11,7 @@ const SidePanel: React.FC<SidePanelProps> = ({ repoStatus, fileStatus, branchSta
     return (
         <div className="space-y-4">
             <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
-                <h3 className="text-xs font-bold text-slate-400 uppercase mb-4 border-b border-slate-200 pb-2">Status Proyek</h3>
+                <h3 className="text-xs font-bold text-slate-400 uppercase mb-4 border-b border-slate-200 pb-2">Project Status</h3>
                 <div className="space-y-3">
                     <div className="flex justify-between items-center text-sm">
                         <span className="text-slate-500">Repo:</span>
@@ -29,7 +29,7 @@ const SidePanel: React.FC<SidePanelProps> = ({ repoStatus, fileStatus, branchSta
             </div>
             <div className="bg-orange-50 border border-orange-200 rounded-xl p-5">
                 <p className="text-xs text-orange-600 italic text-center">
-                    &quot;Developer handal tidak menghafal semua perintah, tapi mengerti konsepnya.&quot;
+                    &quot;A reliable developer doesn't memorize every command, but understands the concepts.&quot;
                 </p>
             </div>
         </div>

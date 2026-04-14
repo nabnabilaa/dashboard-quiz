@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ score, currentBranch, onShowDictionary 
                     <button
                         onClick={onShowDictionary}
                         className="text-slate-400 hover:text-slate-700 transition-colors"
-                        title="Buka Kamus"
+                        title="Open Dictionary"
                     >
                         <i className="fas fa-book"></i>
                     </button>

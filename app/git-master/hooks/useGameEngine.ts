@@ -13,7 +13,7 @@ export const useGameEngine = () => {
     const [activeModal, setActiveModal] = useState<'intro' | 'mode' | 'end' | null>('intro');
 
     // Game State
-    const [repoStatus, setRepoStatus] = useState("Belum Ada");
+    const [repoStatus, setRepoStatus] = useState("None");
     const [fileStatus, setFileStatus] = useState("-");
     const [branchStatus, setBranchStatus] = useState("main");
 
@@ -22,7 +22,7 @@ export const useGameEngine = () => {
         activeNodes: [] as string[],
         activeLines: [] as string[],
         reverseLines: [] as string[],
-        flowText: "Menunggu Misi..."
+        flowText: "Waiting for Mission..."
     });
 
     // Interaction State
@@ -115,7 +115,7 @@ export const useGameEngine = () => {
         }
 
         if (isCorrect) {
-            setTerminalFeedback({ type: 'success', message: ">> SUKSES! Perintah dijalankan." });
+            setTerminalFeedback({ type: 'success', message: ">> SUCCESS! Command executed." });
             const successHistory = newHistory + `>> ${currentLevel.successMsg}\n\n`;
             setTerminalHistory(successHistory);
 
@@ -123,12 +123,12 @@ export const useGameEngine = () => {
             setFeedback({
                 visible: true,
                 isCorrect: true,
-                desc: currentLevel.successMsg || "Berhasil!",
+                desc: currentLevel.successMsg || "Success!",
                 realWorld: currentLevel.realWorld
             });
             updateStatus(currentLevel.updateStatus);
         } else {
-            setTerminalFeedback({ type: 'error', message: ">> ERROR: Perintah tidak dikenali." });
+            setTerminalFeedback({ type: 'error', message: ">> ERROR: Command not recognized." });
             setTerminalHistory(newHistory); // Just add input, no success msg
         }
     };
@@ -154,7 +154,7 @@ export const useGameEngine = () => {
         setCurrentLevelIdx(0);
         setScore(0);
         setActiveModal('intro');
-        setRepoStatus("Belum Ada");
+        setRepoStatus("None");
         setFileStatus("-");
         setBranchStatus("main");
     };

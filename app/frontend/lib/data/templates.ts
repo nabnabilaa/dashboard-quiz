@@ -20,14 +20,14 @@ export const componentTemplates: Record<string, ComponentTemplate> = {
     },
     header_avatar: {
         id: 'header_avatar',
-        label: 'Foto Profil',
+        label: 'Profile Photo',
         icon: User,
         color: 'blue',
         defaultCode: workshopModules[0].initialCode
     },
     header_text: {
         id: 'header_text',
-        label: 'Nama & Judul',
+        label: 'Name & Title',
         icon: Type,
         color: 'blue',
         defaultCode: workshopModules[1].initialCode
@@ -48,38 +48,38 @@ export const componentTemplates: Record<string, ComponentTemplate> = {
     },
     actions: {
         id: 'actions',
-        label: 'Tombol Aksi',
+        label: 'Action Buttons',
         icon: MousePointer,
         color: 'purple',
         defaultCode: workshopModules[3].initialCode
     },
     alert: {
         id: 'alert',
-        label: 'Alert Kontak',
+        label: 'Contact Alert',
         icon: Bell,
         color: 'red',
         defaultCode: workshopModules[6].initialCode
     },
     card_container: {
         id: 'card_container',
-        label: 'Kartu Biodata',
+        label: 'Biodata Card',
         icon: Layout,
         color: 'gray',
         defaultCode: workshopModules[7].initialCode
     },
     divider: {
         id: 'divider',
-        label: 'Garis Pemisah',
+        label: 'Separator Line',
         icon: Layers,
         color: 'gray',
         defaultCode: '<hr class="my-4 border-2">'
     },
     text_paragraph: {
         id: 'text_paragraph',
-        label: 'Paragraf Teks',
+        label: 'Text Paragraph',
         icon: Type,
         color: 'gray',
-        defaultCode: '<p class="text-center text-muted">Tulis deskripsi diri anda di sini dengan panjang lebar.</p>'
+        defaultCode: '<p class="text-center text-muted">Write your self-description here at length.</p>'
     },
     list_group: {
         id: 'list_group',
@@ -94,12 +94,12 @@ export const componentTemplates: Record<string, ComponentTemplate> = {
     },
     simple_table: {
         id: 'simple_table',
-        label: 'Tabel Data',
+        label: 'Data Table',
         icon: Table,
         color: 'indigo',
         defaultCode: `<table class="table table-bordered table-striped mt-3">
   <thead class="table-dark">
-    <tr><th>#</th><th>Nama</th><th>Role</th></tr>
+    <tr><th>#</th><th>Name</th><th>Role</th></tr>
   </thead>
   <tbody>
     <tr><td>1</td><td>Adi</td><td>Admin</td></tr>
@@ -109,7 +109,7 @@ export const componentTemplates: Record<string, ComponentTemplate> = {
     },
     form_input: {
         id: 'form_input',
-        label: 'Formulir',
+        label: 'Form',
         icon: PenTool,
         color: 'red',
         defaultCode: `<div class="mb-3 text-start">

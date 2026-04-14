@@ -55,10 +55,10 @@ export function QuizMode({ onPass }: QuizModeProps) {
                 {/* Header */}
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-4 md:mb-6">
                     <span className="text-xs md:text-sm font-bold text-slate-500 uppercase tracking-wider">
-                        Pertanyaan {idx + 1} / {assessmentQuestions.length}
+                        Question {idx + 1} of {assessmentQuestions.length}
                     </span>
                     <span className="text-[10px] md:text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-500 self-start sm:self-auto border border-slate-200">
-                        Pilih satu jawaban
+                        Select one answer
                     </span>
                 </div>
 
@@ -106,7 +106,7 @@ export function QuizMode({ onPass }: QuizModeProps) {
                                     <div className="bg-emerald-500 rounded-full p-1">
                                         <Check size={14} className="text-white font-bold md:w-4 md:h-4" />
                                     </div>
-                                    <h4 className="text-base md:text-lg font-bold text-emerald-600">Jawaban Tepat!</h4>
+                                    <h4 className="text-base md:text-lg font-bold text-emerald-600">Correct Answer!</h4>
                                 </div>
                                 <p className="text-emerald-700 text-sm md:text-base leading-relaxed border-t border-emerald-200 pt-3">
                                     {q.rationale}
@@ -123,7 +123,7 @@ export function QuizMode({ onPass }: QuizModeProps) {
                   text-sm md:text-base
                 "
                             >
-                                {isLastQuestion ? "Selesaikan Kuis" : "Lanjut ke Soal Berikutnya"}
+                                {isLastQuestion ? "Finish Quiz" : "Next Question"}
                                 <ArrowRight size={18} />
                             </button>
                         </div>
@@ -134,7 +134,7 @@ export function QuizMode({ onPass }: QuizModeProps) {
                         <div className="absolute inset-x-0 bottom-4 md:bottom-6 flex justify-center animate-fade-in">
                             <div className="bg-red-500/90 text-white px-4 md:px-6 py-2 rounded-full font-bold shadow-lg flex items-center gap-2 text-sm md:text-base">
                                 <AlertCircle size={16} />
-                                Kurang tepat, coba lagi ya!
+                                Incorrect, try again!
                             </div>
                         </div>
                     )}

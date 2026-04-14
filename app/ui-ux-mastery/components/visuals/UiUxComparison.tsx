@@ -12,7 +12,7 @@ export const UiUxComparison = () => (
                     Button
                 </div>
             </div>
-            <p className="mt-2 text-center text-[10px] text-slate-500">Visual, Warna, Layout</p>
+            <p className="mt-2 text-center text-[10px] text-slate-500">Visuals, Colors, Layout</p>
         </div>
         <div className="w-[220px] rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
             <div className="mb-2 text-center text-xs font-bold text-pink-500">UX (Experience)</div>
@@ -29,7 +29,7 @@ export const UiUxComparison = () => (
                     Goal
                 </div>
             </div>
-            <p className="mt-2 text-center text-[10px] text-slate-500">Alur, Logika, Kemudahan</p>
+            <p className="mt-2 text-center text-[10px] text-slate-500">Flow, Logic, Ease of Use</p>
         </div>
     </div>
 );

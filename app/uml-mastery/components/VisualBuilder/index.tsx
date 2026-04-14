@@ -163,17 +163,17 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                                 <span className={`flex items-center justify-center w-5 h-5 rounded-full text-xs ${step === s ? 'bg-white/20' : step > s ? 'bg-white/20' : 'bg-slate-300 text-white'}`}>
                                     {step > s ? <Check size={12} /> : s}
                                 </span>
-                                {s === 1 ? 'Aktor' : s === 2 ? 'Proses & Link' : 'Hasil'}
+                                {s === 1 ? 'Actors' : s === 2 ? 'Processes & Links' : 'Result'}
                             </div>
                         ))}
                     </div>
                 </div>
                 <div className="text-center">
                     <h2 className="text-xl font-bold text-slate-800">
-                        {step === 1 ? 'Siapa saja yang terlibat?' : step === 2 ? 'Apa saja kegiatannya?' : 'Diagrammu Siap!'}
+                        {step === 1 ? 'Who is involved?' : step === 2 ? 'What are the activities?' : 'Your Diagram is Ready!'}
                     </h2>
                     <p className="text-sm text-slate-500">
-                        {step === 1 ? 'Sebutkan aktor (orang atau sistem eksternal)' : step === 2 ? 'Isi nama kegiatan dan hubungkan dengan aktor' : 'Review dan simpan hasil kerjamu'}
+                        {step === 1 ? 'Specify actors (people or external systems)' : step === 2 ? 'Enter activity names and connect them to actors' : 'Review and save your work'}
                     </p>
                 </div>
             </div>
@@ -187,8 +187,8 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                             <div className="bg-[#FFDF88] p-1 rounded text-[#B87200] mt-0.5">💡</div>
                             <p className="text-xs text-[#945A00] leading-relaxed">
                                 {view === 'activity'
-                                    ? 'Geser (drag) untuk mengatur urutan. Tambahkan Nodes sesuai kebutuhan alur.'
-                                    : (step === 1 ? 'Tambahkan semua pihak yang terlibat dalam sistem ini.' : 'Tulis kegiatan, lalu KLIK nama aktor di bawahnya untuk menghubungkan.')
+                                    ? 'Drag to reorder. Add nodes according to the flow requirements.'
+                                    : (step === 1 ? 'Add all parties involved in this system.' : 'Write activities, then CLICK the actor names below to connect.')
                                 }
                             </p>
                         </div>
@@ -235,7 +235,7 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                                                     value={actor}
                                                     onChange={(e) => handleUpdateItem('actors', idx, e.target.value)}
                                                     className="flex-1 bg-white border border-slate-300 rounded px-2 py-1 text-sm focus:outline-none focus:border-[#F5A623]"
-                                                    placeholder="Nama Aktor"
+                                                    placeholder="Actor Name"
                                                 />
                                                 <button onClick={() => handleRemoveItem('actors', idx)} className="text-red-400 hover:text-red-600">
                                                     <X size={18} />
@@ -243,7 +243,7 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                                             </div>
                                         ))}
                                         <button onClick={() => handleAddItem('actors')} className="w-full py-2 border-2 border-dashed border-[#FFDF88] text-[#E09000] font-bold rounded-lg hover:bg-[#FFF8EB] transition-colors flex justify-center items-center gap-2 text-sm mt-2">
-                                            <Plus size={16} /> Tambah Aktor
+                                            <Plus size={16} /> Add Actor
                                         </button>
                                     </div>
                                 )}
@@ -259,7 +259,7 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                                                             value={uc}
                                                             onChange={(e) => handleUpdateItem('usecases', uIdx, e.target.value)}
                                                             className="flex-1 bg-slate-50 border border-slate-300 rounded px-2 py-1 text-sm font-semibold focus:outline-none focus:border-[#F5A623]"
-                                                            placeholder="Nama Use Case"
+                                                            placeholder="Use Case Name"
                                                         />
                                                         <button onClick={() => handleRemoveItem('usecases', uIdx)} className="text-red-400 hover:text-red-600">
                                                             <X size={18} />
@@ -284,13 +284,13 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                                                 </div>
                                             ))}
                                             <button onClick={() => handleAddItem('usecases')} className="w-full py-2 border-2 border-dashed border-brand-200 text-brand-600 font-bold rounded-lg hover:bg-brand-50 transition-colors flex justify-center items-center gap-2 text-sm mt-2">
-                                                <Plus size={16} /> Tambah Kegiatan
+                                                <Plus size={16} /> Add Activity
                                             </button>
                                         </div>
 
                                         {/* Advanced Relations */}
                                         <div className="border-t border-slate-200 pt-4">
-                                            <h3 className="text-sm font-bold text-slate-700 mb-2">Relasi Lanjutan</h3>
+                                            <h3 className="text-sm font-bold text-slate-700 mb-2">Advanced Relations</h3>
                                             {relations.map((rel, rIdx) => (
                                                 <div key={rIdx} className="flex flex-wrap gap-2 items-center bg-slate-50 p-2 rounded mb-2 text-xs">
                                                     <select
@@ -320,7 +320,7 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                                                     </button>
                                                 </div>
                                             ))}
-                                            <button onClick={addRelation} className="text-xs text-[#E09000] font-bold hover:underline">+ Tambah Relasi</button>
+                                            <button onClick={addRelation} className="text-xs text-[#E09000] font-bold hover:underline">+ Add Relation</button>
                                         </div>
                                     </div>
                                 )}
@@ -347,7 +347,7 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                             className="btn-secondary px-6 py-2 rounded-lg border border-slate-200 font-semibold text-slate-600 hover:bg-slate-50"
                         >
                             <Settings size={18} className="inline mr-2" />
-                            Edit Lagi
+                            Edit Again
                         </button>
                     )}
                     {step < 3 && (
@@ -356,7 +356,7 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                             className="px-6 py-2 rounded-lg font-semibold text-slate-500 hover:bg-slate-100 flex items-center gap-2"
                         >
                             <ArrowLeft size={18} />
-                            {step === 1 ? 'Kembali Menu' : 'Sebelumnya'}
+                            {step === 1 ? 'Back to Menu' : 'Back'}
                         </button>
                     )}
                 </div>
@@ -368,13 +368,13 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                                 onClick={downloadJSON}
                                 className="px-6 py-2 bg-slate-800 text-white rounded-lg font-bold hover:bg-slate-900 flex items-center gap-2"
                             >
-                                <Save size={18} /> Simpan JSON
+                                <Save size={18} /> Save JSON
                             </button>
                             <button
                                 onClick={onBack}
                                 className="px-6 py-2 bg-[#E09000] text-white rounded-lg font-bold hover:bg-[#B87200] flex items-center gap-2"
                             >
-                                Selesai <Check size={18} />
+                                Finish <Check size={18} />
                             </button>
                         </>
                     ) : (
@@ -382,7 +382,7 @@ export default function VisualBuilder({ scenarioId, initialType, onBack }: Visua
                             onClick={() => setStep(step + 1)}
                             className="px-8 py-2 bg-[#E09000] text-white rounded-lg font-bold hover:bg-[#B87200] flex items-center gap-2 shadow-lg hover:shadow-[#FFDF88]"
                         >
-                            Lanjut <ArrowRight size={18} />
+                            Next <ArrowRight size={18} />
                         </button>
                     )}
                 </div>
@@ -550,7 +550,7 @@ const ActivityNodeList = ({
                                         ? 'text-white placeholder:text-slate-500 selection:bg-slate-600'
                                         : 'text-slate-800 placeholder:text-slate-400 selection:bg-[#FFEFC6]'
                                         }`}
-                                    placeholder={node.type === 'decision' ? 'Apa kondisinya?' : 'Nama Aktivitas'}
+                                    placeholder={node.type === 'decision' ? 'What is the condition?' : 'Activity Name'}
                                 />
                             </div>
 
@@ -559,7 +559,7 @@ const ActivityNodeList = ({
                                 <button
                                     onClick={() => onRemove(node.id)}
                                     className="opacity-0 group-hover:opacity-100 transition-opacity text-red-300 hover:text-red-500 p-1.5 hover:bg-red-50 rounded-full"
-                                    title="Hapus Node"
+                                    title="Delete Node"
                                 >
                                     <X size={16} />
                                 </button>
@@ -584,7 +584,7 @@ const ActivityNodeList = ({
                                             <button
                                                 onClick={() => onRemoveBranch(branch.id)}
                                                 className="opacity-0 group-hover/branch:opacity-100 text-slate-300 hover:text-red-500 transition-all scale-75"
-                                                title="Hapus Cabang"
+                                                title="Delete Branch"
                                             >
                                                 <X size={16} />
                                             </button>
@@ -609,7 +609,7 @@ const ActivityNodeList = ({
                                                 onClick={() => onAddNodeToBranch(node.id, bIdx)}
                                                 className="mt-2 text-[10px] font-bold text-slate-400 hover:text-[#E09000] hover:bg-[#FFF8EB] px-2 py-1.5 rounded-lg border border-dashed border-slate-300 hover:border-[#FFDF88] flex items-center gap-1 transition-all w-full justify-center"
                                             >
-                                                <Plus size={10} /> Tambah Aksi
+                                                <Plus size={10} /> Add Action
                                             </button>
                                         </div>
                                     </div>
@@ -619,7 +619,7 @@ const ActivityNodeList = ({
                                     onClick={() => onAddBranch(node.id)}
                                     className="text-[10px] bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold py-1.5 px-3 rounded-full flex items-center gap-1 transition-colors"
                                 >
-                                    <Plus size={10} /> Cabang Baru
+                                    <Plus size={10} /> New Branch
                                 </button>
                             </div>
                         )}

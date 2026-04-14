@@ -4,7 +4,7 @@ import { Home, Search, User } from 'lucide-react';
 export const IconNavbar = () => (
     <div className="flex w-full max-w-[320px] flex-col gap-4">
         <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-            <div className="mb-2 text-xs font-bold text-red-500">❌ BAD (Ambigu)</div>
+            <div className="mb-2 text-xs font-bold text-red-500">❌ BAD (Ambiguous)</div>
             <div className="flex justify-around rounded-lg bg-slate-50 p-2.5">
                 <div className="flex h-8 w-8 items-center justify-center rounded-md bg-slate-300">
                     <span className="text-base">?</span>

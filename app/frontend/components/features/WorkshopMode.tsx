@@ -70,7 +70,7 @@ function WorkshopEditor({ module, onNext, isLast }: WorkshopEditorProps) {
                 <div className="p-4 md:p-5 bg-white border-b border-slate-200 shrink-0">
                     <h2 className="text-lg md:text-xl font-bold text-slate-800 mb-2">{module.title}</h2>
                     <div className="bg-amber-50 border border-amber-200 p-2 md:p-3 rounded-lg">
-                        <h4 className="text-[10px] md:text-xs font-bold text-amber-600 uppercase">Misi:</h4>
+                        <h4 className="text-[10px] md:text-xs font-bold text-amber-600 uppercase">Mission:</h4>
                         <p className="text-xs md:text-sm text-slate-600">{module.challenge}</p>
                     </div>
                 </div>
@@ -91,7 +91,7 @@ function WorkshopEditor({ module, onNext, isLast }: WorkshopEditorProps) {
                         onClick={() => onNext(code)}
                         className="bg-indigo-600 hover:bg-indigo-500 text-white px-4 md:px-6 py-2 rounded-full font-bold text-xs md:text-sm flex items-center gap-2"
                     >
-                        {isLast ? "Selesai" : "Lanjut"}
+                        {isLast ? "Finish" : "Continue"}
                         <ArrowRight size={14} />
                     </button>
                 </div>
@@ -111,7 +111,7 @@ function WorkshopEditor({ module, onNext, isLast }: WorkshopEditorProps) {
                 {/* Hints Panel */}
                 <div className="h-2/5 flex flex-col bg-slate-50 border-t border-slate-200 shadow-inner">
                     <div className="px-3 md:px-4 py-2 bg-white border-b border-slate-200 shrink-0">
-                        <h4 className="text-[10px] md:text-xs font-bold text-slate-600 uppercase">Kamus Kode</h4>
+                        <h4 className="text-[10px] md:text-xs font-bold text-slate-600 uppercase">Code Dictionary</h4>
                     </div>
                     <HintsPanel hints={module.hints} />
                 </div>
@@ -146,7 +146,7 @@ export function WorkshopMode({ completedModules, onComplete, onFinish }: Worksho
             {/* Sidebar - Module List */}
             <div className="w-full md:w-56 lg:w-64 bg-white border-b md:border-b-0 md:border-r border-slate-200 flex md:flex-col shrink-0 overflow-x-auto md:overflow-y-auto">
                 <div className="p-3 md:p-4 hidden md:block">
-                    <h3 className="text-xs font-bold text-slate-400 uppercase">Modul Belajar</h3>
+                    <h3 className="text-xs font-bold text-slate-400 uppercase">Learning Modules</h3>
                 </div>
 
                 {/* Horizontal scroll on mobile, vertical on desktop */}

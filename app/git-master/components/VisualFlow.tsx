@@ -12,7 +12,7 @@ type VisualFlowProps = {
 };
 
 const VisualFlow: React.FC<VisualFlowProps> = ({ flowState }) => {
-    const { activeNodes = [], activeLines = [], reverseLines = [], flowText = 'Menunggu Misi...' } = flowState;
+    const { activeNodes = [], activeLines = [], reverseLines = [], flowText = 'Waiting for Mission...' } = flowState;
 
     const getNodeClass = (id: string, baseClass: string) => {
         return activeNodes.includes(id)

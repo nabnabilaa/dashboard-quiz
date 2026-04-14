@@ -6,92 +6,92 @@ import { Slide } from '@frontend/lib/types';
  */
 export const introSlides: Slide[] = [
     {
-        title: "1. Analogi Membangun Rumah",
-        desc: "Bayangkan website itu seperti rumah. HTML adalah Dinding & Tiang (Struktur dasar yang menopang segalanya). CSS adalah Cat, Dekorasi, & Tata Letak (Membuat rumah terlihat indah dan nyaman). JS adalah Listrik & Pipa (Membuat lampu menyala, keran air jalan, atau interaksi dinamis).",
+        title: "1. The House Analogy",
+        desc: "Imagine a website as a house. HTML is the Walls & Pillars (the basic structure that supports everything). CSS is the Paint, Decoration, & Layout (making the house look beautiful and comfortable). JS is the Electricity & Plumbing (making lights turn on, water flow, or dynamic interactions).",
         visualType: "analogy_house",
         color: "blue"
     },
     {
-        title: "2. Struktur Tubuh HTML",
-        desc: "HTML dibagi dua area vital: <head> dan <body>. <head> adalah area tak terlihat (meta data, link CSS, judul tab browser) — ibarat pikiran manusia. <body> adalah area yang terlihat di layar (teks, gambar, tombol) — ibarat tubuh fisik yang dilihat orang lain.",
+        title: "2. The HTML Body Structure",
+        desc: "HTML is divided into two vital areas: <head> and <body>. The <head> is the invisible area (meta data, CSS links, browser tab title) — like the human mind. The <body> is the area visible on the screen (text, images, buttons) — like the physical body seen by others.",
         visualType: "html_structure",
         color: "indigo"
     },
     {
-        title: "3. Tag vs Tanpa Tag",
-        desc: "Browser itu bodoh. Jika Anda mengetik teks tanpa 'Tag', browser tidak tahu itu judul atau paragraf, jadi semua ditumpuk begitu saja (inline). Dengan Tag seperti <h1> atau <p>, kita memberi tahu browser: 'Hei, ini Judul!' atau 'Ini Paragraf baru!'. Ini membuat layout rapi (block level).",
+        title: "3. Tag vs. No Tag",
+        desc: "Browsers are literal. If you type text without 'Tags', the browser doesn't know if it's a heading or a paragraph, so everything is just clumped together (inline). With Tags like <h1> or <p>, we tell the browser: 'Hey, this is a Heading!' or 'This is a new Paragraph!'. This creates a clean layout (block level).",
         visualType: "tags_vs_none",
         color: "red"
     },
     {
-        title: "4. Anatomi Tag (Burger)",
-        desc: "Hampir semua elemen HTML memiliki pola 'Burger'. Ada Roti Atas (Tag Pembuka <nama>), Daging (Konten di tengah), dan Roti Bawah (Tag Penutup </nama>). Perhatikan garis miring '/' pada penutup. Jika lupa menutup, tampilan web bisa rusak ke bawahnya.",
+        title: "4. Tag Anatomy (The Burger)",
+        desc: "Almost all HTML elements follow the 'Burger' pattern. There's the Top Bun (Opening Tag <name>), the Meat (Content in the middle), and the Bottom Bun (Closing Tag </name>). Notice the forward slash '/' in the closing tag. Forgetting to close can break the layout below it.",
         visualType: "tag_anatomy",
         color: "orange"
     },
     {
-        title: "5. Heading (Hirarki Judul)",
-        desc: "Heading bukan sekadar teks besar, tapi struktur informasi. <h1> hanya boleh ada SATU per halaman (Topik Utama). <h2> untuk sub-bab, <h3> untuk sub-sub-bab, dst hingga <h6>. Ini membantu Google (SEO) dan pembaca memahami struktur dokumen Anda.",
+        title: "5. Headings (Hierarchy)",
+        desc: "Headings aren't just large text; they are information structure. <h1> should only exist ONCE per page (Main Topic). <h2> for sub-chapters, <h3> for sub-sub-chapters, and so on up to <h6>. This helps Google (SEO) and readers understand your document's structure.",
         visualType: "headings",
         color: "yellow"
     },
     {
         title: "6. Text Formatting",
-        desc: "HTML punya tag khusus untuk penekanan. <b> atau <strong> membuat teks TEBAL (penting). <i> atau <em> membuat teks MIRING (istilah asing/penekanan). <p> membungkus teks dalam blok paragraf dengan jarak antar baris yang nyaman.",
+        desc: "HTML has special tags for emphasis. <b> or <strong> make text BOLD (important). <i> or <em> make text ITALIC (foreign terms/emphasis). <p> wraps text in a paragraph block with comfortable line spacing.",
         visualType: "text_formatting",
         color: "green"
     },
     {
-        title: "7. DIV (Wadah Ajaib)",
-        desc: "Tag <div> (Division) adalah elemen paling sering dipakai. Dia tidak punya tampilan default, tapi dia bertindak sebagai 'Kardus' atau 'Group'. Kita membungkus judul dan paragraf dalam satu <div> agar bisa diberi background warna atau dipindah posisinya bersamaan.",
+        title: "7. DIV (The Magic Container)",
+        desc: "The <div> (Division) tag is the most frequently used element. It has no default appearance but acts as a 'Box' or 'Group'. We wrap titles and paragraphs in a <div> so we can give them a background color or move their position together.",
         visualType: "div_box",
         color: "purple"
     },
     {
-        title: "8. Gambar & Atribut",
-        desc: "Tag <img> unik karena dia 'Self-Closing' (tidak butuh penutup </img>). Dia butuh atribut 'src' (Source) untuk tahu file gambar mana yang diambil. Jika file tidak ketemu, dia akan menampilkan ikon rusak. Gunakan atribut 'width' untuk mengatur ukurannya.",
+        title: "8. Images & Attributes",
+        desc: "The <img> tag is unique because it's 'Self-Closing' (no closing </img> needed). It needs a 'src' (Source) attribute to know which image file to fetch. If the file isn't found, it shows a broken icon. Use the 'width' attribute to adjust its size.",
         visualType: "image_src",
         color: "pink"
     },
     {
-        title: "9. Link (Jangkar)",
-        desc: "Tag <a> (Anchor) menghubungkan halaman satu ke lainnya. Atribut 'href' adalah alamat tujuannya. Jika diisi '#', itu artinya 'Link ke diri sendiri' atau placeholder. Link secara default berwarna biru dan bergaris bawah.",
+        title: "9. Links (Anchors)",
+        desc: "The <a> (Anchor) tag connects one page to another. The 'href' attribute is the destination address. If filled with '#', it means 'Link to oneself' or a placeholder. Links are blue and underlined by default.",
         visualType: "link_href",
         color: "teal"
     },
     {
-        title: "10. List (Daftar)",
-        desc: "Ada dua jenis daftar utama. <ul> (Unordered List) menggunakan bullet points untuk daftar acak (seperti bahan masakan). <ol> (Ordered List) menggunakan angka 1,2,3 untuk langkah-langkah berurutan. Setiap butir di dalamnya wajib dibungkus tag <li> (List Item).",
+        title: "10. Lists (Listing Items)",
+        desc: "There are two main types of lists. <ul> (Unordered List) uses bullet points for random lists (like ingredients). <ol> (Ordered List) uses numbers 1, 2, 3 for sequential steps. Every item inside must be wrapped in an <li> (List Item) tag.",
         visualType: "lists",
         color: "cyan"
     },
     {
-        title: "11. Box Model (Sangat Penting)",
-        desc: "Setiap elemen HTML itu kotak! MARGIN = Jarak transparan di LUAR kotak (mendorong elemen lain menjauh). BORDER = Garis pinggir kotak. PADDING = Jarak di DALAM kotak (antara border dan isi konten). Memahami ini kunci agar layout tidak berantakan.",
+        title: "11. Box Model (Crucial!)",
+        desc: "Every HTML element is a box! MARGIN = Transparent space OUTSIDE the box (pushes other elements away). BORDER = The box's edge. PADDING = Space INSIDE the box (between the border and content). Understanding this is key to layout stability.",
         visualType: "box_model",
         color: "orange"
     },
     {
         title: "12. Bootstrap Class Magic",
-        desc: "Daripada menulis CSS manual seperti 'background-color: blue; color: white; padding: 10px;', Bootstrap memberi kita 'Shortcut' atau Class. Cukup ketik class='bg-primary text-white p-2', dan boom! Tampilan langsung berubah. Ini mempercepat kerja 3x lipat.",
+        desc: "Instead of writing manual CSS like 'background-color: blue; color: white;', Bootstrap gives us 'Shortcuts' or Classes. Just type class='bg-primary text-white p-2', and boom! The appearance changes instantly. This speeds up work by 3x.",
         visualType: "bootstrap_magic",
         color: "blue"
     },
     {
-        title: "13. Tabel (Grid Data)",
-        desc: "Untuk menampilkan data terstruktur (seperti jadwal atau nilai), gunakan <table>. Di dalamnya ada <tr> (Baris/Row) dan <td> (Data/Sel). Gunakan class Bootstrap 'table table-bordered' agar tabel langsung terlihat rapi dan profesional tanpa garis manual.",
+        title: "13. Tables (Grid Data)",
+        desc: "To display structured data (like schedules or grades), use <table>. Inside, there are <tr> (Row) and <td> (Data/Cell). Use Bootstrap's 'table table-bordered' classes for a professional-looking table instantly.",
         visualType: "table_grid",
         color: "indigo"
     },
     {
-        title: "14. Formulir (Input Data)",
-        desc: "Website interaktif butuh Input! Tag <input> memungkinkan user mengetik. Ada type='text' (nama), type='email', atau type='password'. Bungkus mereka dalam <form> dan beri tombol <button> untuk mengirim data tersebut.",
+        title: "14. Forms (Data Input)",
+        desc: "Interactive websites need Input! The <input> tag allowing users to type. There are type='text' (name), type='email', or type='password'. Wrap them in a <form> and provide a <button> to send that data.",
         visualType: "input_form",
         color: "red"
     },
     {
-        title: "15. Semantic HTML (Tag Bermakna)",
-        desc: "Jangan pakai <div> untuk segalanya! Gunakan <header> untuk kepala, <footer> untuk kaki, <nav> untuk menu, dan <article> untuk konten. Ini membuat kode Anda 'bisa dibaca' oleh manusia dan robot Google (SEO Friendly).",
+        title: "15. Semantic HTML (Meaningful Tags)",
+        desc: "Don't use <div> for everything! Use <header> for the head, <footer> for the foot, <nav> for menus, and <article> for content. This makes your code 'readable' by humans and search engines like Google (SEO Friendly).",
         visualType: "semantic_layout",
         color: "green"
     }

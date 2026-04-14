@@ -7,33 +7,33 @@ export interface Question {
 
 export const theoryQuestions: Question[] = [
     {
-        q: "Apa fokus utama seorang Analis Sistem?", opts: ["Menulis kode program secepat mungkin", "Memahami 'Apa yang ingin dicapai'", "Memperbaiki komputer rusak"], correct: 1, exp: "Analis Sistem fokus pada kebutuhan bisnis (APA), bukan teknis coding (BAGAIMANA)."
+        q: "What is the primary focus of a System Analyst?", opts: ["Writing code as fast as possible", "Understanding 'What is to be achieved'", "Fixing broken computers"], correct: 1, exp: "System Analysts focus on business requirements (WHAT), not technical coding (HOW)."
     },
     {
-        q: "Apa fungsi utama Use Case Diagram?", opts: ["Menggambar database", "Menjelaskan fungsionalitas sistem & aktor", "Menghitung biaya proyek"], correct: 1, exp: "Use Case fokus pada 'APA' yang sistem lakukan dan 'SIAPA' yang berinteraksi."
+        q: "What is the primary function of a Use Case Diagram?", opts: ["Drawing the database", "Explaining system functionality & actors", "Calculating project costs"], correct: 1, exp: "Use Cases focus on 'WHAT' the system does and 'WHO' interacts with it."
     },
     {
-        q: "'Sistem harus memuat halaman dalam 2 detik'. Ini contoh...?", opts: ["Fitur Fungsional", "Kualitas (Non-Fungsional)", "User Story"], correct: 1, exp: "Kecepatan adalah karakteristik kualitas (Seberapa baik), bukan fitur (Apa yang dilakukan)."
+        q: "'The system must load a page within 2 seconds'. This is an example of...?", opts: ["Functional Feature", "Quality (Non-Functional)", "User Story"], correct: 1, exp: "Speed is a quality characteristic (How well), not a feature (What it does)."
     },
     {
-        q: "Simbol orang dalam Use Case Diagram disebut...?", opts: ["User", "Person", "Actor"], correct: 2, exp: "Dalam UML, pengguna atau sistem lain yang berinteraksi disebut Actor."
+        q: "What is the person symbol in a Use Case Diagram called?", opts: ["User", "Person", "Actor"], correct: 2, exp: "In UML, users or other systems that interact are called Actors."
     },
     {
-        q: "Simbol Belah Ketupat (Diamond) pada Activity Diagram berarti?", opts: ["Mulai", "Selesai", "Keputusan (Decision)"], correct: 2, exp: "Diamond digunakan untuk percabangan logika (Ya/Tidak)."
+        q: "What does the Diamond symbol in an Activity Diagram mean?", opts: ["Start", "Finish", "Decision"], correct: 2, exp: "Diamonds are used for logical branching (Yes/No)."
     },
     {
-        q: "Garis putus-putus dengan label <<include>> berarti?", opts: ["Relasi Wajib", "Relasi Opsional", "Pewarisan"], correct: 0, exp: "Include artinya Use Case A 'selalu' memanggil Use Case B."
+        q: "What does a dashed line with the <<include>> label mean?", opts: ["Mandatory Relationship", "Optional Relationship", "Inheritance"], correct: 0, exp: "Include means Use Case A 'always' calls Use Case B."
     },
     {
-        q: "Diagram yang paling cocok untuk merancang struktur database adalah...?", opts: ["Activity Diagram", "Class Diagram", "Sequence Diagram"], correct: 1, exp: "Class Diagram menggambarkan entitas data dan relasinya, mirip dengan skema database."
+        q: "Which diagram is most suitable for designing database structures?", opts: ["Activity Diagram", "Class Diagram", "Sequence Diagram"], correct: 1, exp: "Class Diagrams describe data entities and their relationships, similar to a database schema."
     },
     {
-        q: "Pada Sequence Diagram, waktu berjalan ke arah...?", opts: ["Kiri ke Kanan", "Atas ke Bawah", "Bawah ke Atas"], correct: 1, exp: "Sequence Diagram membaca urutan waktu dari atas (awal) ke bawah (akhir)."
+        q: "In a Sequence Diagram, time flows in which direction?", opts: ["Left to Right", "Top to Bottom", "Bottom to Top"], correct: 1, exp: "Sequence Diagrams are read from top (start) to bottom (end)."
     },
     {
-        q: "Bagian arsitektur sistem yang menyimpan data disebut...?", opts: ["Presentation Layer", "Business Layer", "Data Layer"], correct: 2, exp: "Data Layer bertanggung jawab atas penyimpanan dan pengambilan data."
+        q: "What part of the system architecture stores data?", opts: ["Presentation Layer", "Business Layer", "Data Layer"], correct: 2, exp: "The Data Layer is responsible for data storage and retrieval."
     },
     {
-        q: "Apa langkah pertama yang benar sebelum Coding?", opts: ["Desain UI", "Analisis & Perancangan", "Testing"], correct: 1, exp: "Analisis kebutuhan dan perancangan harus dilakukan sebelum konstruksi (coding)."
+        q: "What is the correct first step before Coding?", opts: ["UI Design", "Analysis & Design", "Testing"], correct: 1, exp: "Requirement analysis and design must be done before construction (coding)."
     }
 ];

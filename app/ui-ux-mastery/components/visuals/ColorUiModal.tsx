@@ -7,15 +7,15 @@ export const ColorUiModal = () => (
             <div className="mx-auto mb-4 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-red-50">
                 <AlertTriangle size={24} className="text-red-500" />
             </div>
-            <h3 className="mb-1 text-lg font-extrabold text-slate-900">Hapus Data?</h3>
-            <p className="m-0 text-sm text-slate-500">Aksi ini tidak bisa dibatalkan.</p>
+            <h3 className="mb-1 text-lg font-extrabold text-slate-900">Delete Data?</h3>
+            <p className="m-0 text-sm text-slate-500">This action cannot be undone.</p>
         </div>
         <div className="flex border-t border-slate-200">
             <button className="flex-1 cursor-pointer border-r border-slate-200 bg-white p-4 font-semibold text-slate-500 hover:bg-slate-50">
-                Batal
+                Cancel
             </button>
             <button className="flex-1 cursor-pointer bg-red-50 p-4 font-bold text-red-500 hover:bg-red-100">
-                Hapus
+                Delete
             </button>
         </div>
     </div>

@@ -39,7 +39,7 @@ function drawUseCase(data: BuilderData, title: string) {
 
     let svg = `<svg width="100%" height="${h}" viewBox="0 0 600 ${h}" xmlns="http://www.w3.org/2000/svg">`;
     svg += `<rect x="180" y="20" width="380" height="${h - 40}" fill="#fff" stroke="#4F46E5" stroke-width="3" rx="15"/>`;
-    svg += `<text x="200" y="50" font-weight="900" fill="#4F46E5" font-size="14">SISTEM ${title.toUpperCase()}</text>`;
+    svg += `<text x="200" y="50" font-weight="900" fill="#4F46E5" font-size="14">SYSTEM ${title.toUpperCase()}</text>`;
 
     const aPositions: { x: number, y: number }[] = [];
     const uPositions: { x: number, y: number }[] = [];

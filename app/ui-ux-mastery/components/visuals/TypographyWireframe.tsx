@@ -7,22 +7,22 @@ export const TypographyWireframe = () => (
                 HEADER (H1)
             </span>
             <h1 className="my-1 text-[26px] font-extrabold leading-tight text-slate-900">
-                Desain Website
+                Website Design
             </h1>
         </div>
         <div className="mb-4">
             <span className="rounded bg-pink-50 px-2 py-0.5 text-[10px] font-bold text-pink-500">
                 SUB-HEADER (H2)
             </span>
-            <h2 className="my-1 text-lg font-semibold text-slate-600">Panduan untuk Pemula</h2>
+            <h2 className="my-1 text-lg font-semibold text-slate-600">Beginner's Guide</h2>
         </div>
         <div>
             <span className="rounded bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-500">
                 BODY TEXT (P)
             </span>
             <p className="my-1 text-sm leading-relaxed text-slate-500">
-                Tipografi yang baik memiliki hierarki yang jelas. Judul harus menonjol, dan teks isi harus
-                nyaman dibaca.
+                Good typography has a clear hierarchy. Headings should stand out, and body text should be
+                comfortable to read.
             </p>
         </div>
     </div>

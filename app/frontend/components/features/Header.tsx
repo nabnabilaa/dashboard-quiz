@@ -55,9 +55,9 @@ export function Header({ phase, setPhase }: HeaderProps) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const navItems: { target: Phase; icon: React.ElementType; label: string; color: string }[] = [
-        { target: 'intro', icon: Book, label: 'Materi', color: 'purple' },
-        { target: 'quiz', icon: GraduationCap, label: 'Kuis', color: 'pink' },
-        { target: 'workshop', icon: PenTool, label: 'Belajar', color: 'orange' },
+        { target: 'intro', icon: Book, label: 'Materials', color: 'purple' },
+        { target: 'quiz', icon: GraduationCap, label: 'Quiz', color: 'pink' },
+        { target: 'workshop', icon: PenTool, label: 'Learn', color: 'orange' },
         { target: 'builder', icon: Palette, label: 'Builder', color: 'indigo' },
     ];
 

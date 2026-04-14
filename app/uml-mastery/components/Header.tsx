@@ -19,7 +19,7 @@ export default function Header({ activeTab, onNavigate, show }: HeaderProps) {
                     className={`nav-tab ${activeTab === 'learning' ? 'active' : ''}`}
                     onClick={() => onNavigate('learning')}
                 >
-                    📚 <span>Materi</span>
+                    📚 <span>Materials</span>
                 </button>
                 <button
                     className={`nav-tab ${activeTab === 'quiz' ? 'active' : ''}`}

@@ -13,7 +13,7 @@ export default function VisualMenuScreen({ onStartBuilder, onBack }: VisualMenuS
         {
             id: 'gofood',
             title: 'Go-Food Flow',
-            desc: 'Simulasi pesan makanan online dari pemilihan menu hingga pembayaran.',
+            desc: 'Simulation of ordering food online from menu selection to payment.',
             icon: <Smartphone size={32} className="text-white" />,
             color: 'from-green-500 to-emerald-600',
             btnColor: 'bg-green-600 hover:bg-green-700'
@@ -21,7 +21,7 @@ export default function VisualMenuScreen({ onStartBuilder, onBack }: VisualMenuS
         {
             id: 'atm',
             title: 'ATM System',
-            desc: 'Simulasi alur transaksi mesin ATM termasuk tarik tunai & cek saldo.',
+            desc: 'Simulation of ATM machine transaction flow including withdrawal & balance check.',
             icon: <CreditCard size={32} className="text-white" />,
             color: 'from-orange-500 to-[#E09000]',
             btnColor: 'bg-blue-600 hover:bg-blue-700'
@@ -44,10 +44,10 @@ export default function VisualMenuScreen({ onStartBuilder, onBack }: VisualMenuS
             {/* Header */}
             <div className="text-center mb-12 space-y-3">
                 <h1 className="text-4xl font-extrabold text-slate-800 tracking-tight">
-                    Tantangan Visual
+                    Visual Challenge
                 </h1>
                 <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
-                    Pilih topik dan susun diagram berdasarkan skenario nyata untuk menguji pemahaman logika sistem Anda.
+                    Choose a topic and build a diagram based on real-world scenarios to test your system logic understanding.
                 </p>
             </div>
 
@@ -76,7 +76,7 @@ export default function VisualMenuScreen({ onStartBuilder, onBack }: VisualMenuS
 
                         <button className={`w-full py-3.5 px-6 rounded-xl font-bold text-white shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 ${template.btnColor}`}>
                             <Play size={18} fill="currentColor" />
-                            <span>Mulai Misi</span>
+                            <span>Start Mission</span>
                         </button>
                     </div>
                 ))}
@@ -94,9 +94,9 @@ export default function VisualMenuScreen({ onStartBuilder, onBack }: VisualMenuS
                         </button>
 
                         <div className="text-center mb-8">
-                            <h3 className="text-2xl font-bold text-slate-800 mb-2">Pilih Jenis Diagram</h3>
+                            <h3 className="text-2xl font-bold text-slate-800 mb-2">Choose Diagram Type</h3>
                             <p className="text-slate-500">
-                                Anda ingin membuat diagram apa untuk skenario ini?
+                                Which diagram would you like to create for this scenario?
                             </p>
                         </div>
 
@@ -110,7 +110,7 @@ export default function VisualMenuScreen({ onStartBuilder, onBack }: VisualMenuS
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-slate-800 group-hover:text-[#B87200]">Use Case Diagram</h4>
-                                    <p className="text-sm text-slate-500">Fokus pada aktor dan fungsionalitas sistem.</p>
+                                    <p className="text-sm text-slate-500">Focus on actors and system functionality.</p>
                                 </div>
                             </button>
 
@@ -123,7 +123,7 @@ export default function VisualMenuScreen({ onStartBuilder, onBack }: VisualMenuS
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-slate-800 group-hover:text-emerald-700">Activity Diagram</h4>
-                                    <p className="text-sm text-slate-500">Fokus pada alur kerja dan urutan aktivitas.</p>
+                                    <p className="text-sm text-slate-500">Focus on workflow and sequence of activities.</p>
                                 </div>
                             </button>
                         </div>
@@ -138,7 +138,7 @@ export default function VisualMenuScreen({ onStartBuilder, onBack }: VisualMenuS
                     className="inline-flex items-center gap-2 text-slate-500 hover:text-[#E09000] font-semibold transition-colors py-2 px-4 rounded-lg hover:bg-slate-50"
                 >
                     <ArrowLeft size={18} />
-                    <span>Kembali ke Knowledge Hub</span>
+                    <span>Back to Knowledge Hub</span>
                 </button>
             </div>
         </div>

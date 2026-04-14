@@ -70,14 +70,14 @@ export default function LearningScreen({ onComplete }: LearningScreenProps) {
                 <div className="p-6 relative z-10">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-bold tracking-wide uppercase mb-6">
                         <BookOpen size={12} />
-                        <span>Materi Pembelajaran</span>
+                        <span>Learning Materials</span>
                     </div>
 
                     <h1 className="text-2xl md:text-3xl font-bold leading-tight mb-2 text-white">
                         {slide.title}
                     </h1>
                     <p className="text-orange-50 text-sm opacity-90 leading-relaxed">
-                        Topik {currentIndex + 1} dari {learningSlides.length}
+                        Topic {currentIndex + 1} of {learningSlides.length}
                     </p>
                 </div>
 
@@ -161,7 +161,7 @@ export default function LearningScreen({ onComplete }: LearningScreenProps) {
                         )}
                     >
                         <ArrowLeft size={18} />
-                        <span>Sebelumnya</span>
+                        <span>Back</span>
                     </button>
 
                     <button
@@ -173,7 +173,7 @@ export default function LearningScreen({ onComplete }: LearningScreenProps) {
                                 : "bg-[#F5A623] hover:bg-[#E09000] ring-2 ring-[#F5A623]/20"
                         )}
                     >
-                        <span>{currentIndex === learningSlides.length - 1 ? "Selesai & Lanjut Kuis" : "Selanjutnya"}</span>
+                        <span>{currentIndex === learningSlides.length - 1 ? "Finish & Start Quiz" : "Next"}</span>
                         {currentIndex === learningSlides.length - 1 ? <CheckCircle size={18} /> : <ArrowRight size={18} />}
                     </button>
                 </div>

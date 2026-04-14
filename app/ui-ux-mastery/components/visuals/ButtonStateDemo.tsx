@@ -17,11 +17,11 @@ export const ButtonStateDemo = () => {
                             : 'bg-indigo-600 shadow-md shadow-indigo-600/10'
                         }`}
                 >
-                    {state === 'default' && "Klik Saya"}
+                    {state === 'default' && "Click Me"}
                     {state === 'hover' && "Hovering!"}
                     {state === 'pressed' && "Pressed!"}
                 </button>
-                <p className="mt-4 text-[13px] text-slate-500">Coba hover & tekan tombol ini</p>
+                <p className="mt-4 text-[13px] text-slate-500">Try hovering & clicking this button</p>
             </div>
             <div className="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-4">
                 <div className="flex items-center gap-2.5 text-xs text-slate-600">

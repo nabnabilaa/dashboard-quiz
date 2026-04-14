@@ -50,8 +50,8 @@ export const quizQuestions: Question[] = [
     },
     {
         id: 6,
-        question: "If you have Route::resource('produk', ...), which URL is used to delete data?",
-        options: ["GET /produk/hapus/{id}", "POST /produk/delete/{id}", "DELETE /produk/{id}", "PUT /produk/{id}"],
+        question: "If you have Route::resource('products', ...), which URL is used to delete data?",
+        options: ["GET /products/delete/{id}", "POST /products/delete/{id}", "DELETE /products/{id}", "PUT /products/{id}"],
         correctAnswer: 2,
         explanation: "Following RESTful standards, deleting data uses the DELETE verb on the resource/{id} URL."
     },

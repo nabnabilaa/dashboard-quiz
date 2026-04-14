@@ -15,8 +15,8 @@ interface NavigationProps {
 export const Navigation: React.FC<NavigationProps> = ({ mode, setMode }) => {
     const navItems = [
         { id: 'home', label: 'Main Menu', icon: ArrowLeft, href: '/' },
-        { id: 'intro', label: 'Materi', icon: BookOpen },
-        { id: 'quiz', label: 'Kuis', icon: GraduationCap },
+        { id: 'intro', label: 'Materials', icon: BookOpen },
+        { id: 'quiz', label: 'Quiz', icon: GraduationCap },
         { id: 'game', label: 'Terminal', icon: Terminal },
     ];
 

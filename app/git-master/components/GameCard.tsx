@@ -36,7 +36,7 @@ const GameCard: React.FC<GameCardProps> = ({
         return (
             <div id="game-card" className="bg-white border-2 border-slate-200 rounded-2xl p-6 md:p-8 shadow-lg relative fade-in text-slate-400 text-center">
                 <i className="fas fa-circle-notch fa-spin text-2xl mb-2"></i>
-                <p>Memuat Misi...</p>
+                <p>Loading Mission...</p>
             </div>
         );
     }
@@ -159,7 +159,7 @@ const GameCard: React.FC<GameCardProps> = ({
                     >
                         <div className="mb-2 whitespace-pre-wrap opacity-80">{terminalHistory}</div>
                         <div className="flex items-center text-[#F5A623]">
-                            <span className="mr-2 font-bold">➜  proyek git:(<span className="text-blue-400">main</span>)</span>
+                            <span className="mr-2 font-bold">➜  project git:(<span className="text-blue-400">main</span>)</span>
                             <input
                                 ref={terminalInputRef}
                                 type="text"
@@ -191,7 +191,7 @@ const GameCard: React.FC<GameCardProps> = ({
                     <div className={`p-4 border-b flex items-center gap-3 ${feedback.isCorrect ? 'border-green-200 bg-green-100' : 'border-red-200 bg-red-100'}`}>
                         <i className={`fas ${feedback.isCorrect ? 'fa-check-circle text-green-600' : 'fa-times-circle text-red-500'} text-2xl`}></i>
                         <span className={`font-bold text-lg ${feedback.isCorrect ? 'text-green-800' : 'text-red-800'}`}>
-                            {feedback.isCorrect ? 'SUKSES! Misi Selesai' : 'Kurang Tepat'}
+                            {feedback.isCorrect ? 'SUCCESS! Mission Accomplished' : 'Not Quite Right'}
                         </span>
                     </div>
                     <div className="p-4">
@@ -199,18 +199,18 @@ const GameCard: React.FC<GameCardProps> = ({
 
                         <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
                             <div className="flex items-center gap-2 mb-1 text-blue-600 font-bold text-xs uppercase">
-                                <i className="fas fa-briefcase"></i> Realita Dunia Kerja
+                                <i className="fas fa-briefcase"></i> Workplace Reality
                             </div>
                             <p className="text-xs text-blue-700 leading-relaxed italic" dangerouslySetInnerHTML={{ __html: feedback.realWorld }}></p>
                         </div>
 
                         {feedback.isCorrect ? (
                             <button onClick={onNextLevel} className="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-lg text-sm transition-all shadow-md transform hover:scale-[1.02] active:scale-[0.98]">
-                                Lanjut Level Berikutnya <i className="fas fa-arrow-right ml-2"></i>
+                                Next Level <i className="fas fa-arrow-right ml-2"></i>
                             </button>
                         ) : (
                             <button onClick={onRetryLevel} className="w-full bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold py-3 rounded-lg text-sm transition-all border border-slate-300">
-                                Coba Lagi <i className="fas fa-redo ml-2"></i>
+                                Try Again <i className="fas fa-redo ml-2"></i>
                             </button>
                         )}
                     </div>

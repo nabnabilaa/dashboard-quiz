@@ -16,7 +16,7 @@ export default function KnowledgeScreen({ onNavigate }: KnowledgeScreenProps) {
             {/* Header Area */}
             <div className="text-center space-y-2 mb-8">
                 <h1 className="text-3xl font-bold text-slate-800">Knowledge Hub</h1>
-                <p className="text-slate-500">Kamus Visual Komponen UML</p>
+                <p className="text-slate-500">UML Visual Component Dictionary</p>
             </div>
 
             {/* Filter Bar */}
@@ -68,7 +68,7 @@ export default function KnowledgeScreen({ onNavigate }: KnowledgeScreenProps) {
                     onClick={() => onNavigate('visual-menu')}
                 >
                     <BookOpen size={20} />
-                    <span>Lanjut ke Tantangan Visual</span>
+                    <span>Continue to Visual Challenge</span>
                     <ArrowRight size={20} />
                 </button>
             </div>

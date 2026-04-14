@@ -100,7 +100,7 @@ export function IntroMode({ onFinish }: IntroModeProps) {
               border ${theme.badgeBorder} uppercase tracking-wider
               inline-block
             `}>
-                            Materi {slideIdx + 1} dari {introSlides.length}
+                            Slide {slideIdx + 1} of {introSlides.length}
                         </span>
                     </div>
 
@@ -122,7 +122,7 @@ export function IntroMode({ onFinish }: IntroModeProps) {
                                 className="px-4 md:px-6 py-2.5 md:py-3 rounded-xl font-bold flex items-center gap-2 border border-slate-300 text-slate-500 hover:bg-slate-100 transition-all text-sm md:text-base"
                             >
                                 <ChevronLeft size={18} />
-                                <span className="hidden sm:inline">Kembali</span>
+                                <span className="hidden sm:inline">Back</span>
                             </button>
                         )}
                         <button
@@ -136,7 +136,7 @@ export function IntroMode({ onFinish }: IntroModeProps) {
                                 }
               `}
                         >
-                            {isLastSlide ? "Mulai Kuis" : "Lanjut"}
+                            {isLastSlide ? "Start Quiz" : "Continue"}
                             <ArrowRight size={18} />
                         </button>
                     </div>

@@ -43,7 +43,7 @@ function CheatSheetPanel({ hints }: CheatSheetPanelProps) {
     return (
         <div className="flex-1 overflow-y-auto p-3 md:p-4 flex flex-col gap-3 md:gap-4 bg-slate-50">
             <div className="px-1 py-2 border-b border-slate-200 mb-2">
-                <h4 className="text-xs font-bold text-slate-600 uppercase">Kamus Cepat</h4>
+                <h4 className="text-xs font-bold text-slate-600 uppercase">Quick Sheets</h4>
             </div>
             {hints.map((g, i) => (
                 <div key={i}>
@@ -110,7 +110,7 @@ export function BuilderMode({ items, setItems, selectedId, setSelectedId, userCo
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Portofolio</title>
+  <title>Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
@@ -150,7 +150,7 @@ ${items.map(i => i.htmlCode).join('\n')}
                 </div>
 
                 <div className="p-3 md:p-4">
-                    <h3 className="text-xs font-bold text-slate-400 uppercase">Komponen</h3>
+                    <h3 className="text-xs font-bold text-slate-400 uppercase">Components</h3>
                 </div>
 
                 <div className="flex-1 overflow-y-auto p-2 grid grid-cols-2 md:grid-cols-1 gap-2">
@@ -231,7 +231,7 @@ ${items.map(i => i.htmlCode).join('\n')}
                                 <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-400 pointer-events-none">
                                     <Layout size={36} className="mb-2 opacity-20 md:w-10 md:h-10" />
                                     <p className="text-xs md:text-sm text-center px-4">
-                                        {window.innerWidth < 768 ? 'Ketuk komponen untuk menambahkan' : 'Tarik komponen ke sini'}
+                                        {window.innerWidth < 768 ? 'Tap a component to add it' : 'Drag components here'}
                                     </p>
                                 </div>
                             )}
@@ -307,7 +307,7 @@ ${items.map(i => i.htmlCode).join('\n')}
                     <div className="bg-white w-full max-w-2xl rounded-xl border border-slate-200 shadow-2xl flex flex-col overflow-hidden max-h-[80vh]">
                         {/* Header */}
                         <div className="p-3 md:p-4 border-b border-slate-200 flex justify-between items-center bg-slate-50">
-                            <h3 className="text-slate-800 font-bold text-sm md:text-base">Kode Lengkap (HTML)</h3>
+                            <h3 className="text-slate-800 font-bold text-sm md:text-base">Complete Code (HTML)</h3>
                             <button onClick={() => setShowExport(false)}>
                                 <X className="text-slate-400 hover:text-slate-700" size={20} />
                             </button>
@@ -328,7 +328,7 @@ ${items.map(i => i.htmlCode).join('\n')}
                                 onClick={() => navigator.clipboard.writeText(fullHtml)}
                                 className="bg-indigo-600 text-white px-4 py-2 rounded font-bold text-xs md:text-sm"
                             >
-                                Salin Semua Kode
+                                Copy All Code
                             </button>
                         </div>
                     </div>

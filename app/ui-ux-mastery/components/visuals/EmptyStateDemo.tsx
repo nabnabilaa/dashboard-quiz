@@ -6,12 +6,12 @@ export const EmptyStateDemo = () => (
         <div className="mb-4 flex h-[80px] w-[80px] items-center justify-center rounded-full bg-slate-100">
             <ShoppingCart size={36} className="text-slate-400" />
         </div>
-        <div className="mb-1 text-base font-bold text-slate-900">Keranjang Kosong</div>
+        <div className="mb-1 text-base font-bold text-slate-900">Empty Cart</div>
         <p className="mb-5 text-[13px] text-slate-500">
-            Wah, sepertinya kamu belum memilih barang apapun.
+            Whoops, looks like you haven't picked any items yet.
         </p>
         <button className="rounded-lg border-none bg-indigo-600 px-6 py-2.5 text-[13px] font-semibold text-white">
-            Mulai Belanja
+            Start Shopping
         </button>
     </div>
 );

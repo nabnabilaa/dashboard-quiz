@@ -61,10 +61,10 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
                 <div className="bg-slate-50 p-6 border-b border-slate-200 flex justify-between items-center">
                     <div className="flex items-center gap-2 text-[#E09000] font-bold uppercase tracking-wider text-sm">
                         <HelpCircle size={18} />
-                        Kuis Teori
+                        Theory Quiz
                     </div>
                     <div className="text-slate-500 font-medium text-sm">
-                        Soal {currentIdx + 1} / {theoryQuestions.length}
+                        Question {currentIdx + 1} / {theoryQuestions.length}
                     </div>
                 </div>
 
@@ -119,7 +119,7 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
                                     <CheckCircle size={24} />
                                 </div>
                                 <div className="space-y-2 flex-1">
-                                    <h4 className="font-bold text-green-800 text-lg">Jawaban Benar!</h4>
+                                    <h4 className="font-bold text-green-800 text-lg">Correct Answer!</h4>
                                     <p className="text-green-700 leading-relaxed text-sm">
                                         {question.exp}
                                     </p>
@@ -130,7 +130,7 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
                                     onClick={nextQuestion}
                                     className="bg-[#F5A623] hover:bg-[#E09000] text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg shadow-[#F5A623]/20 flex items-center gap-2"
                                 >
-                                    <span>{currentIdx < theoryQuestions.length - 1 ? 'Soal Selanjutnya' : 'Selesai'}</span>
+                                    <span>{currentIdx < theoryQuestions.length - 1 ? 'Next Question' : 'Finish'}</span>
                                     <ArrowRight size={18} />
                                 </button>
                             </div>
