@@ -29,13 +29,13 @@
         "./app/backend-laravel/*"
       ],
       "@belajar/*": [
-        "./app/ui-ux-mastery/*"
+        "./apps/ui-ux/src/*"
       ],
       "@hacking/*": [
         "./app/ethical-hacking/*"
       ],
       "@frontend/*": [
-        "./app/frontend/*"
+        "./apps/frontend/src/*"
       ],
       "@git/*": [
         "./app/git-master/*"
@@ -54,6 +54,8 @@
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "apps/*/.next",
+    "apps/*/node_modules"
   ]
 }
