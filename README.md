@@ -35,7 +35,3 @@ public/              Shared static assets
 ```
 
 Frontend Development and UI/UX Mastery can also be deployed on their own by pointing a Vercel project at `apps/frontend` or `apps/ui-ux` as the Root Directory. Their source lives in `apps/<course>/src` and is re-exported by the combined platform, so one edit updates both deployments.
-
----
-
-Designed & built by **Nabila Melsyana**.

@@ -142,6 +142,16 @@ body {
 .animate-float { animation: float 3s ease-in-out infinite; }
 .pulse-glow { animation: pulse-glow 2s infinite; }
 
+@keyframes landing-marquee {
+  to { transform: translateX(-50%); }
+}
+
+.landing-marquee { animation: landing-marquee 40s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-marquee { animation: none; }
+}
+
 /* Gradient text utility */
 .gradient-text {
   background: linear-gradient(135deg, #F5A623, #E09000);

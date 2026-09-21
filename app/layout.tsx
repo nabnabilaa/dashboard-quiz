@@ -26,7 +26,6 @@ export const metadata: Metadata = {
   },
   description:
     'Six interactive tech courses in one dashboard: UI/UX, UML, Git, Frontend, Laravel and Ethical Hacking, with visual quizzes, live editors and in-browser simulators.',
-  authors: [{ name: 'Nabila Melsyana' }],
   icons: { icon: '/logo-maxy.png', apple: '/logo-maxy.png' },
   openGraph: {
     title: 'Maxy Learning — Interactive Learning Platform',
