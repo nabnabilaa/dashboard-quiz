@@ -15,8 +15,26 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Maxy Learning Platform',
-  description: 'Interactive educational platform by Maxy Academy',
+  metadataBase: new URL(
+    process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : 'http://localhost:3000',
+  ),
+  title: {
+    default: 'Maxy Learning — Interactive Learning Platform',
+    template: '%s · Maxy Learning',
+  },
+  description:
+    'Six interactive tech courses in one dashboard: UI/UX, UML, Git, Frontend, Laravel and Ethical Hacking, with visual quizzes, live editors and in-browser simulators.',
+  authors: [{ name: 'Nabila Melsyana' }],
+  icons: { icon: '/logo-maxy.png', apple: '/logo-maxy.png' },
+  openGraph: {
+    title: 'Maxy Learning — Interactive Learning Platform',
+    description:
+      'Learn tech by doing, not just reading. Visual quizzes, live editors and in-browser simulators across six courses.',
+    images: ['/logo-maxy.png'],
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
